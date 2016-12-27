@@ -1,5 +1,5 @@
 //requires jquery.tablesorter.pager.js
-//(c) 2014, Immo Schulz-Gerlach, FeU-Anwendungen, ZMI, FernUni-Hagen.de
+//(c) 2016, Immo Schulz-Gerlach, isg-software.de
 
 (function( $ ) {
  	"use strict";
@@ -29,11 +29,11 @@
 	            var selectId = id+"sel";
 
 				var controls = '<div id="' + id + '" class="tablesorterPagerControls">' +
-					'<button type="button" class="first" title="zum Anfang">&lt;&lt;</button>' +
-					'<button type="button" class="prev" title="eine Seite zur&uuml;ck">&lt;</button>' +
+					'<button type="button" class="first pill" title="zum Anfang">&lt;&lt;</button>' +
+					'<button type="button" class="prev pill" title="eine Seite zur&uuml;ck">&lt;</button>' +
 					'<input type="text" size="15" class="pagedisplay" readonly name="'+id+'pgnr" title="angezeigte Seite/Seitenzahl gesamt (angezeigte Zeilen/Zeilenzahl gesamt)"/>' +
-					'<button type="button" class="next" title="eine Seite weiter">&gt;</button>' +
-					'<button type="button" class="last" title="zum Ende">&gt;&gt;</button>' +
+					'<button type="button" class="next pill" title="eine Seite weiter">&gt;</button>' +
+					'<button type="button" class="last pill" title="zum Ende">&gt;&gt;</button>' +
 					'<select class="pagesize" id="'+selectId+'" name="'+selectId+'" title="Anzahl anzuzeigender Tabellenzeilen">';
 				for (var i = 0, o = settings.sizes.length; i < o; i++) {
 					var size = settings.sizes[i];

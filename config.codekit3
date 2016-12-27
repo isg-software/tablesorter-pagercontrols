@@ -9,35 +9,98 @@
 	],
 "creatorBuild": "25479",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
+	"\/css\/pillbuttons.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/pillbuttons-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/pillbuttons.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/pillbuttons.css.map",
+		"oF": 0
+		},
 	"\/example.html": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/example.html",
 		"oF": 0
 		},
-	"\/jquery.tablesorter.pager.appendcontrols.js": {
+	"\/js\/jquery.tablesorter.pager.appendcontrols.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/jquery.tablesorter.pager.appendcontrols.min.js",
+		"oAP": "\/js\/jquery.tablesorter.pager.appendcontrols.min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/jquery.tablesorter.pager.appendcontrols.min.js": {
+	"\/js\/jquery.tablesorter.pager.appendcontrols.min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/jquery.tablesorter.pager.appendcontrols.min.min.js",
+		"oAP": "\/js\/jquery.tablesorter.pager.appendcontrols.min.min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/less\/pillbuttons.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/css\/pillbuttons.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/LICENSE",
+		"oF": 0
 		},
 	"\/node_modules": {
 		"ft": 65536,
 		"oA": 2,
 		"oAP": "\/build\/node_modules",
 		"oF": 0
+		},
+	"\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		}
 	},
 "hooks": [
@@ -46,7 +109,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 504464462,
-	"displayValue": "tablesorter-pagercontrols_unversioned",
+	"displayValue": "tablesorter-pagercontrols",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-facepalm"
 	},
@@ -1826,7 +1889,7 @@
 		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 0,
+		"autoOutputPathStyle": 3,
 		"createSourceMap": 1,
 		"disableJavascript": 0,
 		"ieCompatibility": 1,
