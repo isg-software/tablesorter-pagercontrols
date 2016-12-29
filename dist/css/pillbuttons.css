@@ -1,14 +1,14 @@
-button.pill {
+.tablesorterPagerControls button {
   border-radius: 1em;
   margin: 2px;
   background-color: silver;
   color: white;
   border: none;
 }
-button.pill:disabled {
+.tablesorterPagerControls button:disabled {
   opacity: 0.5;
 }
-button.pill:hover:not(:disabled) {
-  background-color: #555;
+.tablesorterPagerControls button:hover:not(:disabled) {
+  background-color: #0080FF;
 }
 /*# sourceMappingURL=pillbuttons.css.map */

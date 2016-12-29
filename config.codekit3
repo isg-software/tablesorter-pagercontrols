@@ -49,16 +49,28 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/examples-english.html": {
+	"\/examples\/english\/examples-pillbuttons.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/examples-english.html",
+		"oAP": "\/examples\/english\/examples-pillbuttons.html",
 		"oF": 0
 		},
-	"\/examples-german.html": {
+	"\/examples\/english\/examples-standardbuttons.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/examples-german.html",
+		"oAP": "\/examples\/english\/examples-standardbuttons.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-pillbuttons.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-pillbuttons.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-standardbuttons.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-standardbuttons.html",
 		"oF": 0
 		},
 	"\/LICENSE": {

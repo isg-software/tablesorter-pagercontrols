@@ -54,11 +54,11 @@
 	            var selectId = id+"sel";
 
 				var controls = '<div id="' + id + '" class="tablesorterPagerControls">' +
-					'<button type="button" class="first pill" title="' + tooltips.first + '">&lt;&lt;</button>' +
-					'<button type="button" class="prev pill" title="' + tooltips.prev + '">&lt;</button>' +
+					'<button type="button" class="first" title="' + tooltips.first + '">&lt;&lt;</button>' +
+					'<button type="button" class="prev" title="' + tooltips.prev + '">&lt;</button>' +
 					'<input type="text" size="15" class="pagedisplay" readonly name="'+id+'pgnr" title="' + tooltips.pagedisplay + '"/>' +
-					'<button type="button" class="next pill" title="' + tooltips.next + '">&gt;</button>' +
-					'<button type="button" class="last pill" title="' + tooltips.last + '">&gt;&gt;</button>' +
+					'<button type="button" class="next" title="' + tooltips.next + '">&gt;</button>' +
+					'<button type="button" class="last" title="' + tooltips.last + '">&gt;&gt;</button>' +
 					'<select class="pagesize" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
 				for (var i = 0, o = settings.sizes.length; i < o; i++) {
 					var size = settings.sizes[i];
