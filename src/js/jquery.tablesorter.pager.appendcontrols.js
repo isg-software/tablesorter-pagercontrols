@@ -1,5 +1,28 @@
-//requires jquery.tablesorter.pager.js
-//(c) 2016, Immo Schulz-Gerlach, isg-software.de
+/**
+ * @license 
+ * Copyright (c) 2017, Immo Schulz-Gerlach, www.isg-software.de 
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification, are 
+ * permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this list of
+ * conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice, this list
+ * of conditions and the following disclaimer in the documentation and/or other materials
+ * provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT 
+ * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED 
+ * TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+ * WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 (function( $ ) {
  	"use strict";
@@ -18,6 +41,8 @@
     										//von einer Plugin-internen Default-Benennung abhängig zu sein.
     	}, options);
  
+ 		var tooltips = $.fn.appendTablesorterPagerControls.tooltips;
+ 
         this.filter("table").each(function() {
             var t = $(this);
             
@@ -29,12 +54,12 @@
 	            var selectId = id+"sel";
 
 				var controls = '<div id="' + id + '" class="tablesorterPagerControls">' +
-					'<button type="button" class="first pill" title="zum Anfang">&lt;&lt;</button>' +
-					'<button type="button" class="prev pill" title="eine Seite zur&uuml;ck">&lt;</button>' +
-					'<input type="text" size="15" class="pagedisplay" readonly name="'+id+'pgnr" title="angezeigte Seite/Seitenzahl gesamt (angezeigte Zeilen/Zeilenzahl gesamt)"/>' +
-					'<button type="button" class="next pill" title="eine Seite weiter">&gt;</button>' +
-					'<button type="button" class="last pill" title="zum Ende">&gt;&gt;</button>' +
-					'<select class="pagesize" id="'+selectId+'" name="'+selectId+'" title="Anzahl anzuzeigender Tabellenzeilen">';
+					'<button type="button" class="first pill" title="' + tooltips.first + '">&lt;&lt;</button>' +
+					'<button type="button" class="prev pill" title="' + tooltips.prev + '">&lt;</button>' +
+					'<input type="text" size="15" class="pagedisplay" readonly name="'+id+'pgnr" title="' + tooltips.pagedisplay + '"/>' +
+					'<button type="button" class="next pill" title="' + tooltips.next + '">&gt;</button>' +
+					'<button type="button" class="last pill" title="' + tooltips.last + '">&gt;&gt;</button>' +
+					'<select class="pagesize" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
 				for (var i = 0, o = settings.sizes.length; i < o; i++) {
 					var size = settings.sizes[i];
 					controls += '<option value="' + size + '"';
@@ -43,9 +68,9 @@
 					}
 					controls += '>' + size + '</option>';
 				}
-				controls += '<option value="all">Alle</option>' +
+				controls += '<option value="all">' + tooltips.all + '</option>' +
 					'</select> ' +
-					'<label for="'+selectId+'">Zeilen</label></div>';
+					'<label for="'+selectId+'">' + tooltips.rows + '</label></div>';
 				
 				//Erst die Tabelle in ein DIV einfassen, dann hinter der Tabelle (vor dem </div>)
 				//die Controls einfügen.

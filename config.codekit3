@@ -15,62 +15,51 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
-	"\/css\/pillbuttons.css": {
+	"\/dist\/css\/pillbuttons.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/pillbuttons-min.css",
+		"oAP": "\/dist\/css\/pillbuttons-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/css\/pillbuttons.css.map": {
+	"\/dist\/css\/pillbuttons.css.map": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/css\/pillbuttons.css.map",
+		"oAP": "\/dist\/css\/pillbuttons.css.map",
 		"oF": 0
 		},
-	"\/example.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/example.html",
-		"oF": 0
-		},
-	"\/js\/jquery.tablesorter.pager.appendcontrols.js": {
+	"\/dist\/js\/jquery.tablesorter.pager.appendcontrols.english.min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/jquery.tablesorter.pager.appendcontrols.min.js",
+		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.english.min.min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/jquery.tablesorter.pager.appendcontrols.min.js": {
+	"\/dist\/js\/jquery.tablesorter.pager.appendcontrols.german.min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/jquery.tablesorter.pager.appendcontrols.min.min.js",
+		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.german.min.min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/less\/pillbuttons.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "\/css\/pillbuttons.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
+	"\/examples-english.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples-english.html",
+		"oF": 0
+		},
+	"\/examples-german.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples-german.html",
+		"oF": 0
 		},
 	"\/LICENSE": {
 		"ft": 8192,
@@ -101,11 +90,71 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.english.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.english.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.german.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.german.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/src\/less\/pillbuttons.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/dist\/css\/pillbuttons.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
 		}
 	},
 "hooks": [
 	],
 "manualImportLinks": {
+	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.english.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/jquery.tablesorter.pager.appendcontrols.js",
+			"position": 0,
+			"type": 0
+			}
+		],
+	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.german.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/jquery.tablesorter.pager.appendcontrols.js",
+			"position": 0,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"creationDate": 504464462,
@@ -1848,9 +1897,9 @@
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.min.js",
 		"autoOutputPathRelativePath": "\/min",
-		"autoOutputPathReplace1": "",
-		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0,
+		"autoOutputPathReplace1": "src",
+		"autoOutputPathReplace2": "dist",
+		"autoOutputPathStyle": 3,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -1887,8 +1936,8 @@
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
 		"autoOutputPathRelativePath": "..\/css",
-		"autoOutputPathReplace1": "less",
-		"autoOutputPathReplace2": "css",
+		"autoOutputPathReplace1": "src\/less",
+		"autoOutputPathReplace2": "dist\/css",
 		"autoOutputPathStyle": 3,
 		"createSourceMap": 1,
 		"disableJavascript": 0,
