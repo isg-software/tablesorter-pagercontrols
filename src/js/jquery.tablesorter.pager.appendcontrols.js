@@ -31,8 +31,8 @@
  
     $.fn.appendTablesorterPagerControls = function( options ) {
     
-    	var settings = $.extend($.fn.appendTablesorterPagerControls.defaults, options);
- 		var tooltips = $.fn.appendTablesorterPagerControls.tooltips;
+    	var settings = $.extend({}, $.fn.appendTablesorterPagerControls.defaults, options);
+ 		var tooltips = $.extend({}, $.fn.appendTablesorterPagerControls.tooltips, options.tooltips);
  
         this.filter("table").each(function() {
             var t = $(this);
@@ -43,11 +43,16 @@
 				//Füge Table-Pager nur ein, wenn die Zeilenzahl der Tabelle größer als die kleinste Pager-Größe ist (unabhängig von initialSize)!		
 	            var id = settings.prefix + idCounter++;
 	            var selectId = id+"sel";
+	            
+	            var displayCommonAttribs = ' class="pagedisplay" id="' + id + '" title="' + tooltips.pagedisplay + '"';
+	            var display = typeof settings.pagedisplayInputSize === 'number' && settings.pagedisplayInputSize > 0 ?
+	            	'<input type="text" size="' + settings.pagedisplayInputSize+ '" readonly name="'+id+'pgnr"' + displayCommonAttribs + '/>'
+	            	: '<span class="pagedisplay"' + displayCommonAttribs + '></span>';
 
 				var controls = '<div id="' + id + '" class="tablesorterPagerControls">' +
 					'<button type="button" class="first" title="' + tooltips.first + '">&lt;&lt;</button>' +
 					'<button type="button" class="prev" title="' + tooltips.prev + '">&lt;</button>' +
-					'<input type="text" size="' + settings.pageDisplaySize+ '" class="pagedisplay" readonly name="'+id+'pgnr" title="' + tooltips.pagedisplay + '"/>' +
+					 display +
 					'<button type="button" class="next" title="' + tooltips.next + '">&gt;</button>' +
 					'<button type="button" class="last" title="' + tooltips.last + '">&gt;&gt;</button>' +
 					'<select class="pagesize" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
@@ -139,8 +144,10 @@
     		/**
     		 * Size (width) for the input holding the page display. You may change this option 
     		 * corresponding to the output option.
+    		 * Or set to 0 or null in order to disable the input field completely and render the display
+    		 * as styleable text (in a span field).
     		 */
-    		pageDisplaySize: 15    		
+    		pagedisplayInputSize: null  		
     };
  
 }( jQuery ));

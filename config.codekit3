@@ -15,6 +15,22 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/dist\/css\/jquery.tablesorter.pager.appendcontrols-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css.map",
+		"oF": 0
+		},
 	"\/dist\/css\/pillbuttons.css": {
 		"aP": 0,
 		"bl": 0,
@@ -49,10 +65,22 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/examples\/english\/examples-customPagedisplay.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-customPagedisplay.html",
+		"oF": 0
+		},
 	"\/examples\/english\/examples-pillbuttons.html": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/examples\/english\/examples-pillbuttons.html",
+		"oF": 0
+		},
+	"\/examples\/english\/examples-standardbuttons-inputPagedisplay.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-standardbuttons-inputPagedisplay.html",
 		"oF": 0
 		},
 	"\/examples\/english\/examples-standardbuttons.html": {
@@ -61,10 +89,22 @@
 		"oAP": "\/examples\/english\/examples-standardbuttons.html",
 		"oF": 0
 		},
+	"\/examples\/german\/examples-pillbuttons-customPagedisplay.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-pillbuttons-customPagedisplay.html",
+		"oF": 0
+		},
 	"\/examples\/german\/examples-pillbuttons.html": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/examples\/german\/examples-pillbuttons.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-standardbuttons-inputPagedisplay.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-standardbuttons-inputPagedisplay.html",
 		"oF": 0
 		},
 	"\/examples\/german\/examples-standardbuttons.html": {
@@ -129,6 +169,23 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/src\/less\/jquery.tablesorter.pager.appendcontrols.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
 		},
 	"\/src\/less\/pillbuttons.less": {
 		"aP": 0,

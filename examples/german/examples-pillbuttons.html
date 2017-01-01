@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
 	<script type="text/javascript" src="../../dist/js/jquery.tablesorter.pager.appendcontrols.german.min.js"></script>
+	<link rel="stylesheet" href="../../dist/css/jquery.tablesorter.pager.appendcontrols.css" type="text/css">
 	<link rel="stylesheet" href="../../dist/css/pillbuttons.css" type="text/css">
 	
 	<script type="text/javascript">
@@ -29,8 +30,7 @@ $(function() {
     $("table")
         .tablesorter({widthFixed: true, widgets: ['zebra']})
         .appendTablesorterPagerControls({sizes: [2, 10, 30, 100], initialSize: 10});
-});
-</code></pre>
+});</code></pre>
 
 <p>Diese Seite bindet außerdem das optionale CSS <code>pillbuttons.css</code> zur Gestaltung der Steuerelemente
 der Tabellen-Pager ein.</p>

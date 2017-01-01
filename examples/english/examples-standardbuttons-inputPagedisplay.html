@@ -8,15 +8,19 @@
 	<script type="text/javascript" src="../../node_modules/tablesorter/node_modules/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
-	<script type="text/javascript" src="../../dist/js/jquery.tablesorter.pager.appendcontrols.german.min.js"></script>
+	<script type="text/javascript" src="../../dist/js/jquery.tablesorter.pager.appendcontrols.english.min.js"></script>
 	<link rel="stylesheet" href="../../dist/css/jquery.tablesorter.pager.appendcontrols.css" type="text/css">
 	
 	<script type="text/javascript">
-	$(function() {
-		$("table")
-			.tablesorter({widthFixed: true, widgets: ['zebra']})
-           	.appendTablesorterPagerControls({sizes: [2, 10, 30, 100], initialSize: 10});
-	});
+		$(function() {
+			$("table")
+				.tablesorter({widthFixed: true, widgets: ['zebra']})
+				.appendTablesorterPagerControls({
+					sizes: [2, 10, 30, 100], 
+					initialSize: 10,
+					pagedisplayInputSize: 15
+				});
+		});
 	</script>
 </head>
 <body>
@@ -28,12 +32,19 @@
 $(function() {
     $("table")
         .tablesorter({widthFixed: true, widgets: ['zebra']})
-        .appendTablesorterPagerControls({sizes: [2, 10, 30, 100], initialSize: 10});
+        .appendTablesorterPagerControls({
+            sizes: [2, 10, 30, 100], 
+            initialSize: 10,
+            pagedisplayInputSize: 15
+        });
 });</code></pre>
 
-<h1>Mini-Tabelle: 2 Zeilen</h1>
-<p>Diese Tabelle demonstriert, dass das Plugin keine Steuerungselemente zu einer Tabelle hinzufügt,
-deren Zeilenzahl kleiner oder gleich der kleinsten Tabellengröße (in diesem Fall: 2) ist.</p>
+<p>By setting the <code>pagedisplayInputSize</code> option, the page display is not inserted
+as plain (and styleable) text but into a disabled input field of the given size (15 characters).</p>
+
+<h1>Mini Table: 2 Lines</h1>
+<p>This is to demo that the pager controls won't be added to a table with no more rows than the 
+minimum selectable table size (which is configured to 2 in this case)</p>
 <table cellspacing="1" class="tablesorter tablesorter-blue">
 	<thead>
 		<tr>
@@ -73,11 +84,9 @@ deren Zeilenzahl kleiner oder gleich der kleinsten Tabellengröße (in diesem Fa
 </table>
 
 
-<h1>Kleine Tabelle: 10 Zeilen</h1>
-<p>Demonstriert den Fall, dass die Default-Größe des Pagers zwar die gesamte Tabelle fassen kann,
-so dass zunächst nicht geblättert werden kann, dass die Tabellengröße jedoch größer als die kleinste
-einstellbare Seitengröße ist: Die Steuerungselemente werden daher eingeblendet, da eine kleinere
-Tabellengröße auswählbar ist, für die sie benötigt werden.</p>
+<h1>Small Table: 10 Lines</h1>
+<p>Demos that the initial page size will hold the whole table, but the pager controls are added
+nonetheless, since a smaller page size is configured to be selectable.</p>
 <table cellspacing="1" class="tablesorter tablesorter-blue">
 	<thead>
 		<tr>
@@ -198,7 +207,7 @@ Tabellengröße auswählbar ist, für die sie benötigt werden.</p>
 	</tbody>
 </table>
 
-<h1>Große Tabelle</h1>
+<h1>Large Table</h1>
 <table cellspacing="1" class="tablesorter tablesorter-blue">
 	<thead>
 		<tr>

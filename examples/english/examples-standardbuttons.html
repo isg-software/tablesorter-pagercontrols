@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
 	<script type="text/javascript" src="../../dist/js/jquery.tablesorter.pager.appendcontrols.english.min.js"></script>
+	<link rel="stylesheet" href="../../dist/css/jquery.tablesorter.pager.appendcontrols.css" type="text/css">
 	
 	<script type="text/javascript">
 	$(function() {
@@ -28,8 +29,7 @@ $(function() {
     $("table")
         .tablesorter({widthFixed: true, widgets: ['zebra']})
         .appendTablesorterPagerControls({sizes: [2, 10, 30, 100], initialSize: 10});
-});
-</code></pre>
+});</code></pre>
 
 <h1>Mini Table: 2 Lines</h1>
 <p>This is to demo that the pager controls won't be added to a table with no more rows than the 

@@ -12,11 +12,15 @@
 	<link rel="stylesheet" href="../../dist/css/jquery.tablesorter.pager.appendcontrols.css" type="text/css">
 	
 	<script type="text/javascript">
-	$(function() {
-		$("table")
-			.tablesorter({widthFixed: true, widgets: ['zebra']})
-           	.appendTablesorterPagerControls({sizes: [2, 10, 30, 100], initialSize: 10});
-	});
+		$(function() {
+			$("table")
+				.tablesorter({widthFixed: true, widgets: ['zebra']})
+				.appendTablesorterPagerControls({
+					sizes: [2, 10, 30, 100], 
+					initialSize: 10,
+					pagedisplayInputSize: 15
+				});
+		});
 	</script>
 </head>
 <body>
@@ -28,8 +32,16 @@
 $(function() {
     $("table")
         .tablesorter({widthFixed: true, widgets: ['zebra']})
-        .appendTablesorterPagerControls({sizes: [2, 10, 30, 100], initialSize: 10});
+        .appendTablesorterPagerControls({
+            sizes: [2, 10, 30, 100], 
+            initialSize: 10,
+            pagedisplayInputSize: 15
+        });
 });</code></pre>
+
+<p>Durch Setzen der <code>pagedisplayInputSize</code>-Option wird die Seitenanzeige nicht mehr
+als Klartext in die Seite eingefügt, sondern in ein (deaktiviertes / nicht editierbares) Eingabefeld
+der angegebenen Breite (15 Zeichen).</p>
 
 <h1>Mini-Tabelle: 2 Zeilen</h1>
 <p>Diese Tabelle demonstriert, dass das Plugin keine Steuerungselemente zu einer Tabelle hinzufügt,
