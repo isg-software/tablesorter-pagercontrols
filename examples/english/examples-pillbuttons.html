@@ -10,6 +10,8 @@
 	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
 	<script type="text/javascript" src="../../dist/js/jquery.tablesorter.pager.appendcontrols.english.min.js"></script>
+<!--	<script type="text/javascript" src="../../src/js/jquery.tablesorter.pager.appendcontrols.js"></script>
+	<script type="text/javascript" src="../../src/js/jquery.tablesorter.pager.appendcontrols.english.js"></script>-->
 	<link rel="stylesheet" href="../../dist/css/pillbuttons.css" type="text/css">
 	
 	<script type="text/javascript">
@@ -17,6 +19,7 @@
 		$("table")
 			.tablesorter({widthFixed: true, widgets: ['zebra']})
            	.appendTablesorterPagerControls({sizes: [2, 10, 30, 100], initialSize: 10});
+//          	.appendTablesorterPagerControls({sizes: [2, 10, 30, 100], initialSize: 10, pageDisplaySize: 3, output: '{page}'});
 	});
 	</script>
 </head>

@@ -31,16 +31,7 @@
  
     $.fn.appendTablesorterPagerControls = function( options ) {
     
-    	var settings = $.extend({
-    		//Defaults
-    		sizes: [20, 30, 40, 50, 100], 	//In options kann ein alternatives sizes-Array übergeben werden. Es muss dann nicht-leer und aufsteigend sortiert sein!
-    		initialSize: 20,				//In options kann eine andere initialSize (Anfangsgröße) übergeben werden. Der Wert muss in sizes vorkommen!
-    		prefix: "tableSorterPager"		//Beginn der IDs und Names von Form-Elementen, jeweils mit Counter-Suffix (beginnend bei 1) und "sel" für 
-    										//die Size-Select oder "pgnr" für die aktuelle Seitennr versehen, durchgezählt pro Tabelle.
-    										//Eine aufrufende Seite kann diesen Text selbst festlegen, falls sie z.B. Form-Elemente beim Post auswerten möchte, um dann nicht
-    										//von einer Plugin-internen Default-Benennung abhängig zu sein.
-    	}, options);
- 
+    	var settings = $.extend($.fn.appendTablesorterPagerControls.defaults, options);
  		var tooltips = $.fn.appendTablesorterPagerControls.tooltips;
  
         this.filter("table").each(function() {
@@ -56,7 +47,7 @@
 				var controls = '<div id="' + id + '" class="tablesorterPagerControls">' +
 					'<button type="button" class="first" title="' + tooltips.first + '">&lt;&lt;</button>' +
 					'<button type="button" class="prev" title="' + tooltips.prev + '">&lt;</button>' +
-					'<input type="text" size="15" class="pagedisplay" readonly name="'+id+'pgnr" title="' + tooltips.pagedisplay + '"/>' +
+					'<input type="text" size="' + settings.pageDisplaySize+ '" class="pagedisplay" readonly name="'+id+'pgnr" title="' + tooltips.pagedisplay + '"/>' +
 					'<button type="button" class="next" title="' + tooltips.next + '">&gt;</button>' +
 					'<button type="button" class="last" title="' + tooltips.last + '">&gt;&gt;</button>' +
 					'<select class="pagesize" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
@@ -90,7 +81,7 @@
 					cssLast: '.last',
 					cssPageDisplay: '.pagedisplay',
 					cssPageSize: '.pagesize',
-					output: '{page}/{totalPages} ({startRow}-{endRow}/{totalRows})', 
+					output: settings.output, 
 					positionFixed: false}
 					//TODO Diese Options (zumindest die ganzen css- und output-Options) in ein Default-Option-Objekt auslagern 
 					//und für den Nutzer meines Plugins änderbar gestalten
@@ -111,6 +102,45 @@
  
         return this;
  
+    };
+    
+    /**
+     * Default options.
+     */
+    $.fn.appendTablesorterPagerControls.defaults = {
+			/**
+			 * The table sizes (number of visible rows) selectable by the user. 
+			 * Array of numbers, must be sorted (ascending) and not empty.
+			 */
+    		sizes: [20, 30, 40, 50, 100],
+    		/**
+    		 * Initial table size.
+    		 * This must be a single element (number) of the sizes array to be preselected 
+    		 * when loading the page / applying the plug-ing.
+    		 */
+    		initialSize: 20,
+    		/**
+    		 * Prefix string used for generated element IDs.
+    		 * The ID for the DIV element holding the pager controls will consist of this prefix plus a number.
+    		 * Form elements within that DIV will get an ID starting identically, but with a further suffix:
+    		 * "sel" for the table size select box and "pgnr" for the input with the page number display.
+    		 */
+    		prefix: "tableSorterPager",
+    		/**
+    		 * This output option is passed directly to the tablesorter pager plug-in. 
+    		 * Defines the pattern of information to be displayed in the page display.
+    		 * (For details see the pager documentation.)
+    		 * Please note, that if you change this pattern, it's recommended to also change the
+    		 * corresponding tooltip text (see language-specific files).
+    		 */
+    		output: '{page}/{totalPages} ({startRow}-{endRow}/{totalRows})',
+    		//TODO: Lokalisierung nicht des kompletten Tooltips, sondern ein Wort pro Variable und Tooltip im selben
+    		//Output-Pattern aus den übersetzten Einzelwerten zusammensetzen?
+    		/**
+    		 * Size (width) for the input holding the page display. You may change this option 
+    		 * corresponding to the output option.
+    		 */
+    		pageDisplaySize: 15    		
     };
  
 }( jQuery ));
