@@ -65,10 +65,16 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/examples\/english\/examples-customPagedisplay.html": {
+	"\/examples\/english\/examples-pillbuttons-customLabels.html": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-customPagedisplay.html",
+		"oAP": "\/examples\/english\/examples-pillbuttons-customLabels.html",
+		"oF": 0
+		},
+	"\/examples\/english\/examples-pillbuttons-customPagedisplay.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-pillbuttons-customPagedisplay.html",
 		"oF": 0
 		},
 	"\/examples\/english\/examples-pillbuttons.html": {
@@ -87,6 +93,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/examples\/english\/examples-standardbuttons.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-pillbuttons-customLabels.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-pillbuttons-customLabels.html",
 		"oF": 0
 		},
 	"\/examples\/german\/examples-pillbuttons-customPagedisplay.html": {

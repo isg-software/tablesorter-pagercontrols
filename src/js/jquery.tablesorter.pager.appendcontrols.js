@@ -56,11 +56,11 @@
 					: '<span ' + displayCommonAttribs + '></span>';
 
 				var controls = '<div id="' + id + '" class="' + settings.classControls + '">' +
-					'<button type="button" class="' + settings.classFirst + '" title="' + tooltips.first + '">&lt;&lt;</button>' +
-					'<button type="button" class="' + settings.classPrev + '" title="' + tooltips.prev + '">&lt;</button>' +
+					'<button type="button" class="' + settings.classFirst + '" title="' + tooltips.first + '">' + settings.labelFirst + '</button>' +
+					'<button type="button" class="' + settings.classPrev + '" title="' + tooltips.prev + '">' + settings.labelPrev + '</button>' +
 					 display +
-					'<button type="button" class="' + settings.classNext + '" title="' + tooltips.next + '">&gt;</button>' +
-					'<button type="button" class="' + settings.classLast + '" title="' + tooltips.last + '">&gt;&gt;</button>' +
+					'<button type="button" class="' + settings.classNext + '" title="' + tooltips.next + '">' + settings.labelNext + '</button>' +
+					'<button type="button" class="' + settings.classLast + '" title="' + tooltips.last + '">' + settings.labelLast + '</button>' +
 					'<select class="' + settings.classPagesize + '" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
 				for (var i = 0, o = settings.sizes.length; i < o; i++) {
 					var size = settings.sizes[i];
@@ -80,9 +80,9 @@
 				//in diesem inline-block die Controls z.B. rechtsbündung unter dem rechten Tabellenrand 
 				//angeordnet werden können.
 				t.wrap('<div class="' + settings.classWrapper + '"></div>').after(controls);
-				//TODO class "tablesorterPagerWrapper" konfigurierbar machen
 				
-				t.tablesorterPager({container: $("#" + id),
+				t.tablesorterPager({
+					container: $("#" + id),
 					size: settings.initialSize,
 					offset: 0,
 					page: 0,
@@ -93,16 +93,8 @@
 					cssPageDisplay: '.' + settings.classPagedisplay,
 					cssPageSize: '.' + settings.classPagesize,
 					output: settings.output, 
-					positionFixed: false}
-					//TODO Diese Options (zumindest die ganzen css- und output-Options) in ein Default-Option-Objekt auslagern 
-					//und für den Nutzer meines Plugins änderbar gestalten
-					//Wenn konfigurierbar, dann natürlich auch unten den Selector im Eventhandler anpassen!
-					//Und in der HTML-Erzeugung oben müssten dann auch die Klassenbezeichner aus den Options
-					//genommen werden. Aber wozu eigentlich? Eventuell die css-Bezeichner doch hartverdrahten?
-					//Aber zumindest in einem zentralen Objekt wären sie doch wartungsfreundlicher – und dann
-					//auch überstimmbar…
-					
-				).on("pageMoved", function(ev, opts) {
+					positionFixed: false
+				}).on("pageMoved", function(ev, opts) {
 					$("#" + id + " button." + settings.classPrev + ", #" + id + " button." + settings.classFirst)
 						.prop("disabled", opts.page === 0);
 					$("#" + id + " button." + settings.classNext + ", #" + id + " button." + settings.classLast)
@@ -188,7 +180,23 @@
 			 * Defaults to 'tablesorterPagerControls'.
 			 * NOTE: If you change this value, the included CSS files will not work completely, but will have to be adapted to the new class name.
 			 */
-			classControls: "tablesorterPagerControls"
+			classControls: "tablesorterPagerControls",
+			/**
+			 * button label for the 'first page' button.
+			 */
+			labelFirst: "&lt;&lt;",
+			/**
+			 * button label for the 'previous page' button.
+			 */
+			labelPrev: "&lt;",
+			/**
+			 * button label for the 'next page' button.
+			 */
+			labelNext: "&gt;",
+			/**
+			 * button label for the 'last page' button.
+			 */
+			labelLast: "&gt;&gt;"
 	};
  
 }( jQuery ));
