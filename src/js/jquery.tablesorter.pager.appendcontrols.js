@@ -104,6 +104,8 @@
 						.prop("disabled", opts.page === 0);
 					$("#" + id + " button." + settings.classNext + ", #" + id + " button." + settings.classLast)
 						.prop("disabled", opts.page >= pageCnt - 1);
+						//use >= instead of ===
+						//reason: if table is empty (e.g. filtered), pageCnt may be 0, pageCnt-1 thus negative, while opts.page is 0 (greater -1)!
 				}).trigger("pageMoved", [{page: 0, totalPages: cntLines / settings.initialSize}]);
 			}
 		});
