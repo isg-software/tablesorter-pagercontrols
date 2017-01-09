@@ -51,6 +51,9 @@
 				var selectId = id+"sel";
 				
 				var displayCommonAttribs = ' class="' + settings.classPagedisplay + '" id="' + id + '" title="' + tooltips.pagedisplay + '"';
+				if (settings.outputFiltered) {
+					displayCommonAttribs += ' data-pager-output-filtered="' + settings.outputFiltered + '"';
+				}
 				var display = typeof settings.pagedisplayInputSize === 'number' && settings.pagedisplayInputSize > 0 ?
 					'<input type="text" size="' + settings.pagedisplayInputSize+ '" readonly name="'+id+'pgnr"' + displayCommonAttribs + '/>'
 					: '<span ' + displayCommonAttribs + '></span>';
@@ -81,8 +84,9 @@
 				//angeordnet werden können.
 				t.wrap('<div class="' + settings.classWrapper + '"></div>').after(controls);
 				
+				var container = $("#" + id);
 				t.tablesorterPager({
-					container: $("#" + id),
+					container: container,
 					size: settings.initialSize,
 					offset: 0,
 					page: 0,
@@ -94,11 +98,12 @@
 					cssPageSize: '.' + settings.classPagesize,
 					output: settings.output, 
 					positionFixed: false
-				}).on("pageMoved", function(ev, opts) {
+				}).on("pagerComplete", function(ev, opts) {
+					var pageCnt = typeof opts.filteredPages === 'number' ? opts.filteredPages : opts.totalPages;
 					$("#" + id + " button." + settings.classPrev + ", #" + id + " button." + settings.classFirst)
 						.prop("disabled", opts.page === 0);
 					$("#" + id + " button." + settings.classNext + ", #" + id + " button." + settings.classLast)
-						.prop("disabled", opts.page === opts.totalPages - 1);
+						.prop("disabled", opts.page >= pageCnt - 1);
 				}).trigger("pageMoved", [{page: 0, totalPages: cntLines / settings.initialSize}]);
 			}
 		});
@@ -137,6 +142,13 @@
 			 * corresponding tooltip text (see language-specific files).
 			 */
 			output: '{page}/{totalPages} ({startRow}-{endRow}/{totalRows})',
+			/**
+			 * second output pattern only used when the 'filter' widget is applied to the table and the user
+			 * entered a filter, i.e. the table does not show all rows.
+			 * If null, the output pattern will not change for filtered tables. But you may use this option
+			 * to define a separate output pattern containing the {filteredRows} or {filteredPages} placeholders.
+			 */
+			outputFiltered: null,
 			/**
 			 * Size (width) for the input holding the page display. You may change this option 
 			 * corresponding to the output option.

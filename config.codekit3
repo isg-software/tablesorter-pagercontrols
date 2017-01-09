@@ -77,6 +77,12 @@
 		"oAP": "\/examples\/english\/examples-pillbuttons-customPagedisplay.html",
 		"oF": 0
 		},
+	"\/examples\/english\/examples-pillbuttons-filter.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-pillbuttons-filter.html",
+		"oF": 0
+		},
 	"\/examples\/english\/examples-pillbuttons.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -105,6 +111,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/examples\/german\/examples-pillbuttons-customPagedisplay.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-pillbuttons-filter.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-pillbuttons-filter.html",
 		"oF": 0
 		},
 	"\/examples\/german\/examples-pillbuttons.html": {
