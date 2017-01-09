@@ -53,6 +53,10 @@ Instead of manually adding controls like those shown above to your HTML document
 		* Only in this case, the following pager plug-in's optional feature is available: The current page number and/or current number of the first line may be inserted as input fields. The user can then enter a number and press return in order to directly switch to the desired page (resp. page holding the desired line).
 
 
+## Dependencies
+
+* Needs [tablesorter][npm_tablesorter]. Tested with 2.28.4, and requires at least this version for the option `outputFiltered` to work. If you don't use the filter widget or you don't need a different page display for filtered tables, this should also be compatible with earlier versions of tablesorter.
+* Needs [jQuery][npm_jquery]. Tested with jQuery 3 (the NPM module definces a dependency to jquery V3.x.x), but should also be compatible with some earlier versions.
 
 ## Usage
 
@@ -118,6 +122,13 @@ The `appendTablesorterPagerControls()` method optionally takes an object as argu
          */
         output: '{page}/{totalPages} ({startRow}-{endRow}/{totalRows})',
         /**
+         * second output pattern only used when the 'filter' widget is applied to the table and the user
+         * entered a filter, i.e. the table does not show all rows.
+         * If null, the output pattern will not change for filtered tables. But you may use this option
+         * to define a separate output pattern containing the {filteredRows} or {filteredPages} placeholders.
+         */
+        outputFiltered: null,
+        /**
          * Size (width) for the input holding the page display. You may change this option 
          * corresponding to the output option.
          * Or set to 0 or null in order to disable the input field completely and render the display
@@ -179,7 +190,7 @@ The `appendTablesorterPagerControls()` method optionally takes an object as argu
         labelLast: "&gt;&gt;"
     };
 
-See included example
+See included example pages.
 
 ## License: BSD 2-clause
 
@@ -196,3 +207,5 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 
 [tablesorter]: https://github.com/Mottie/tablesorter
+[npm_tablesorter]: https://www.npmjs.com/package/tablesorter
+[npm_jquery]: https://www.npmjs.com/package/jquery

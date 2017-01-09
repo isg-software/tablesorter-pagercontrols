@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="tablesorter-pagercontrols">tablesorter-pagercontrols</h1>
+
+<p>This jQuery plug-in is an add-on for <a href="https://github.com/Mottie/tablesorter">mottie&#8217;s tablesorter plug-in</a>, more explicitly its pager add-on. It programmatically adds pager controls below a table and applies the pager add-on for large HTML tables, so that you don&#8217;t have to insert the controls to the HTML manually any more.</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>The “normal” usage of the tablesorter&#8217;s pager add-on requires you to add controls to your HTML document (in addition to the table). The following HTML fragment is taken from an original example page:</p>
+
+<pre><code>&lt;table class=&quot;tablesorter&quot;&gt;
+&lt;!-- view page source to see the entire table --&gt;
+&lt;/table&gt;
+
+&lt;!-- pager --&gt;
+&lt;div id=&quot;pager&quot; class=&quot;pager&quot;&gt;
+  &lt;form&gt;
+    &lt;img src=&quot;first.png&quot; class=&quot;first&quot;/&gt;
+    &lt;img src=&quot;prev.png&quot; class=&quot;prev&quot;/&gt;
+    &lt;!-- the &quot;pagedisplay&quot; can be any element, including an input --&gt;
+    &lt;span class=&quot;pagedisplay&quot; data-pager-output-filtered=&quot;{startRow:input} &amp;ndash; {endRow} / {filteredRows} of {totalRows} total rows&quot;&gt;&lt;/span&gt;
+    &lt;img src=&quot;next.png&quot; class=&quot;next&quot;/&gt;
+    &lt;img src=&quot;last.png&quot; class=&quot;last&quot;/&gt;
+    &lt;select class=&quot;pagesize&quot;&gt;
+      &lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;
+      &lt;option value=&quot;20&quot;&gt;20&lt;/option&gt;
+      &lt;option value=&quot;30&quot;&gt;30&lt;/option&gt;
+      &lt;option value=&quot;40&quot;&gt;40&lt;/option&gt;
+      &lt;option value=&quot;all&quot;&gt;All Rows&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>When calling the <code>tablesorterPager</code> plug-in, you may then “connect” these controls with the pager by setting corresponding options to the classes of the controls.</p>
+
+<p>The goal of <em>this</em> plug-in is to get rid of pager-specific HTML mark-up in the document. So, if you want to dynamically apply a table sorter and pager to one or more tables inside some HTML document via JavaScript, while the HTML really only holds the data table, have a look at this plug-in.</p>
+
+<p>Instead of manually adding controls like those shown above to your HTML document and calling the <code>tablesorterPager</code> plug-in, you simply call this <code>appendTablesorterPagerControls</code> plug-in on your jQuery resultset. It automatically appends a <code>div</code> element beneath the table holding the default controls and then internally applies the <code>tablesorterPager</code>, ‘wiring’ it to the inserted controls.</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li>Checks whether the table is larger than the smallest page size option. Only adds the pager if that&#8217;s the case, i.e. non-pageable tables will not be equipped with a useless pager.</li>
+<li>In difference to the typical examples like the source code shown above, this plug-in does not insert images but real HTML 5 buttons (<code>&lt;button&gt;…&lt;/button&gt;</code> elements).
+
+<ul>
+<li>By default these look like any button of the user&#8217;s OS, but the buttons can also be styled. This plug-in contains a <code>pillbuttons.css</code> stylesheet demonstrating styling capabilities by creating flat buttons with hover effect shaped with semicircles on the left- and righthand side.</li>
+<li>Unavailable buttons (previous/first page buttons on page one or next/last page buttons on the last page) get disabled.</li>
+</ul></li>
+<li>Button labels are configurable via options.</li>
+<li>All controls support tooltips (via the <code>title</code> attribute).
+
+<ul>
+<li>Default tooltips are available in english or german.</li>
+<li>On source level, tooltips are defined in separate scripts files for easy localization.</li>
+<li>Tooltips may also be overridden locally via the plug-in options.</li>
+</ul></li>
+<li>More options include selectable page sizes, initial page size and CSS class names for the generated HTML elements.</li>
+<li>The page display element may be <em>either</em>
+
+<ul>
+<li>a disabled text input element (sporting fixed width and the standard form font also used for the button labels and page size select box) <em>or</em></li>
+<li>normal document text.
+
+<ul>
+<li>Only in this case, the following pager plug-in&#8217;s optional feature is available: The current page number and/or current number of the first line may be inserted as input fields. The user can then enter a number and press return in order to directly switch to the desired page (resp. page holding the desired line).</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<ul>
+<li>Needs <a href="https://www.npmjs.com/package/tablesorter">tablesorter</a>. Tested with 2.28.4, and requires at least this version for the option <code>outputFiltered</code> to work. If you don&#8217;t use the filter widget or you don&#8217;t need a different page display for filtered tables, this should also be compatible with earlier versions of tablesorter.</li>
+<li>Needs <a href="https://www.npmjs.com/package/jquery">jQuery</a>. Tested with jQuery 3 (the NPM module definces a dependency to jquery V3.x.x), but should also be compatible with some earlier versions.</li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>Include the script files for jQuery, tablesorter, the pager and this plug-in to your HTML as well as the desired CSS files (you may use the bundled style sheets or create your own).</p>
+
+<p>Select your tables via jQuery and apply the <code>tablesorter</code> and <code>appendTablesorterPagerControls</code> (instead of <code>tablesorterPager</code>) to the result set.</p>
+
+<p>Your HTML&#8217;s head might look like this:</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;…&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;node_modules/tablesorter/dist/css/theme.blue.css&quot; type=&quot;text/css&quot;&gt;
+
+    &lt;script type=&quot;text/javascript&quot; src=&quot;node_modules/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;node_modules/tablesorter/dist/js/jquery.tablesorter.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;node_modules/tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.tablesorter.pager.appendcontrols.english.min.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/jquery.tablesorter.pager.appendcontrols.css&quot; type=&quot;text/css&quot;&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        $(function() {
+            $(&quot;table&quot;)
+                .tablesorter({widthFixed: true, widgets: ['zebra']})
+                .appendTablesorterPagerControls();
+        });
+    &lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+
+<p>The minified (distribution) script files include the main plug-in code as well as the tooltip definitions in one language. Therefore you&#8217;ll find the script file in different versions, named after the tooltip language.</p>
+
+<p>If you want to include the unminified source scripts (e.g. for debugging purposes or if you&#8217;ve created a new language file and not yet compiled a new distribution file using it), you&#8217;ll have to first load the main script file (<code>jquery.tablesorter.pager.appendcontrols.js</code>) followed by the language pack file (e.g. <code>jquery.tablesorter.pager.appendcontrols.english.js</code>).</p>
+
+<p>The <code>appendTablesorterPagerControls()</code> method optionally takes an object as argument which overrides default options. The default options are defined as follows (and may also be globally overwritten):</p>
+
+<pre><code>$.fn.appendTablesorterPagerControls.defaults = {
+    /**
+     * The table sizes (number of visible rows) selectable by the user. 
+     * Array of numbers, must be sorted (ascending) and not empty.
+     */
+    sizes: [20, 30, 40, 50, 100],
+    /**
+     * Initial table size.
+     * This must be a single element (number) of the sizes array to be preselected 
+     * when loading the page / applying the plug-ing.
+     */
+    initialSize: 20,
+    /**
+     * Prefix string used for generated element IDs.
+     * The ID for the DIV element holding the pager controls will consist of this prefix plus a number.
+     * Form elements within that DIV will get an ID starting identically, but with a further suffix:
+     * &quot;sel&quot; for the table size select box and &quot;pgnr&quot; for the input with the page number display.
+     */
+    prefix: &quot;tableSorterPager&quot;,
+    /**
+     * This output option is passed directly to the tablesorter pager plug-in. 
+     * Defines the pattern of information to be displayed in the page display.
+     * (For details see the pager documentation.)
+     * Please note, that if you change this pattern, it's recommended to also change the
+     * corresponding tooltip text (see language-specific files).
+     */
+    output: '{page}/{totalPages} ({startRow}-{endRow}/{totalRows})',
+    /**
+     * second output pattern only used when the 'filter' widget is applied to the table and the user
+     * entered a filter, i.e. the table does not show all rows.
+     * If null, the output pattern will not change for filtered tables. But you may use this option
+     * to define a separate output pattern containing the {filteredRows} or {filteredPages} placeholders.
+     */
+    outputFiltered: null,
+    /**
+     * Size (width) for the input holding the page display. You may change this option 
+     * corresponding to the output option.
+     * Or set to 0 or null in order to disable the input field completely and render the display
+     * as styleable text (in a span field).
+     */
+    pagedisplayInputSize: null,
+    /**
+     * CSS class for the 'next page' button, defaults to 'next'.
+     */
+    classNext: &quot;next&quot;,
+    /**
+     * CSS class for the 'previous page' button, defaults to 'prev'.
+     */
+    classPrev: &quot;prev&quot;,
+    /**
+     * CSS class for the 'first page' button, defaults to 'first'.
+     */
+    classFirst: &quot;first&quot;,
+    /**
+     * CSS class for the 'last page' button, defaults to 'last'.
+     */
+    classLast: &quot;last&quot;,
+    /**
+     * CSS class for the span or input for displaying the current page, page count etc. (see output option for formatting this display).
+     * Defaults to 'pagedisplay'.
+     * NOTE: If you change this value, the included CSS files will not work completely, but will have to be adapted to the new class name.
+     */
+    classPagedisplay: &quot;pagedisplay&quot;,
+    /**
+     * CSS class for the page size selection (select element, defaults to 'pagesize').
+     */
+    classPagesize: &quot;pagesize&quot;,
+    /**
+     * CSS class for a div element wrapped around the table and its pager controls. 
+     * Defaults to 'tablesorterPagerWrapper'.
+     */
+    classWrapper: &quot;tablesorterPagerWrapper&quot;,
+    /**
+     * CSS class for a div element containing the table pager controls (inserted below the table). 
+     * Defaults to 'tablesorterPagerControls'.
+     * NOTE: If you change this value, the included CSS files will not work completely, but will have to be adapted to the new class name.
+     */
+    classControls: &quot;tablesorterPagerControls&quot;,
+    /**
+     * button label for the 'first page' button.
+     */
+    labelFirst: &quot;&amp;lt;&amp;lt;&quot;,
+    /**
+     * button label for the 'previous page' button.
+     */
+    labelPrev: &quot;&amp;lt;&quot;,
+    /**
+     * button label for the 'next page' button.
+     */
+    labelNext: &quot;&amp;gt;&quot;,
+    /**
+     * button label for the 'last page' button.
+     */
+    labelLast: &quot;&amp;gt;&amp;gt;&quot;
+};
+</code></pre>
+
+<p>See included example pages.</p>
+
+<h2 id="license:bsd2-clause">License: BSD 2-clause</h2>
+
+<p>Copyright (c) 2017, Immo Schulz-Gerlach, www.isg-software.de<br/>
+All rights reserved.</p>
+
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+<ol>
+<li><p>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</p></li>
+<li><p>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</p></li>
+</ol>
+
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &#8220;AS IS&#8221; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+</body>
+</html>
