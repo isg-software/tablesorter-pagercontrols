@@ -31,6 +31,14 @@
 
 <div id="main">
 
+<p>This code demonstrates overriding the pager plug-in's output option, in this case such that
+it only shows page number and total page count (thus omitting the line numbers shown by default)
+and places the page number into an input field, enabling the user to switch to a page by
+entering its number.</p>
+<p>Note that also the pagedisplay tooltip is overwritten in order to conform to the new output pattern.</p>
+
+<p>This page also includes the optional CSS file <code>pillbuttons.css</code> for styling the pager buttons.</p>
+
 <h1>Javascript</h1>
 <pre><code class="language-javascript">
 $(function() {
@@ -45,14 +53,6 @@ $(function() {
             }
         });
 });</code></pre>
-
-<p>This code demonstrates overriding the pager plug-in's output option, in this case such that
-it only shows page number and total page count (thus omitting the line numbers shown by default)
-and places the page number into an input field, enabling the user to switch to a page by
-entering its number.</p>
-<p>Note that also the pagedisplay tooltip is overwritten in order to conform to the new output pattern.</p>
-
-<p>This page also includes the optional CSS file <code>pillbuttons.css</code> for styling the pager buttons.</p>
 
 <h1>Mini Table: 2 Lines</h1>
 <p>This is to demo that the pager controls won't be added to a table with no more rows than the 
