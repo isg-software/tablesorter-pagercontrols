@@ -4,7 +4,7 @@ This jQuery plug-in is an add-on for [mottie's tablesorter plug-in][tablesorter]
 
 ## Motivation
 
-The “normal” usage of the tablesorter's pager add-on requires you to add controls to your HTML document (in addition to the table). The following HTML fragment is taken from an original example page:
+The “normal” usage of the tablesorter's pager add-on requires you to manually create a user interface (control buttons to skip pages, page size selection and page display) in your HTML document (in addition to the table). The following HTML fragment is taken from an original example page:
 
     <table class="tablesorter">
     <!-- view page source to see the entire table -->
@@ -29,9 +29,11 @@ The “normal” usage of the tablesorter's pager add-on requires you to add con
       </form>
     </div>
 
-When calling the `tablesorterPager` plug-in, you may then “connect” these controls with the pager by setting corresponding options to the classes of the controls.
+When calling the `tablesorterPager` plug-in, you may then “connect” these controls with the pager by setting corresponding options to the classes of the controls. This way, the plug-in is “wired” to your controls and adds the application logic to your UI.
 
-The goal of _this_ plug-in is to get rid of pager-specific HTML mark-up in the document. So, if you want to dynamically apply a table sorter and pager to one or more tables inside some HTML document via JavaScript, while the HTML really only holds the data table, have a look at this plug-in.
+While that is a clear separation of logic (in javascript) and user interface (in HTML) and offers you great freedom of UI design, I personally was looking for a solution which (just like the main `tablesorter` functionality) is directly applicable to any table in my web application's output without requiring the web app itself to include controls into its output.
+
+So, the goal of _this_ plug-in is to get rid of pager-specific HTML mark-up in the document. If you, too, want to dynamically apply a table sorter and pager to one or more tables inside some HTML document via JavaScript, while the HTML really only holds the data table, have a look at this plug-in.
 
 Instead of manually adding controls like those shown above to your HTML document and calling the `tablesorterPager` plug-in, you simply call this `appendTablesorterPagerControls` plug-in on your jQuery resultset. It automatically appends a `div` element beneath the table holding the default controls and then internally applies the `tablesorterPager`, ‘wiring’ it to the inserted controls.
 
