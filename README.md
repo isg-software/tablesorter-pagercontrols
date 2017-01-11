@@ -2,6 +2,10 @@
 
 This jQuery plug-in is an add-on for [mottie's tablesorter plug-in][tablesorter], more explicitly its pager add-on. It programmatically adds pager controls below a table and applies the pager add-on for large HTML tables, so that you don't have to insert the controls to the HTML manually any more.
 
+[Project Home Page][HOME]
+
+[HOME]: https://www.isg-software.de/tspagercontrols/indexe.html
+
 ## Motivation
 
 The “normal” usage of the tablesorter's pager add-on requires you to manually create a user interface (control buttons to skip pages, page size selection and page display) in your HTML document (in addition to the table). The following HTML fragment is taken from an original example page:
@@ -192,7 +196,11 @@ The `appendTablesorterPagerControls()` method optionally takes an object as argu
         labelLast: "&gt;&gt;"
     };
 
-See included example pages.
+## Examples
+
+If you download the package from GitHub or NPM, you'll find it includes some example pages.
+
+Online views of these examples can also be found on the [project's home page][HOME].
 
 ## License: BSD 2-clause
 
