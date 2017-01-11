@@ -1,0 +1,14 @@
+.tablesorterPagerControls button {
+  border-radius: 1em;
+  margin: 2px;
+  background-color: silver;
+  color: white;
+  border: none;
+}
+.tablesorterPagerControls button:disabled {
+  opacity: 0.5;
+}
+.tablesorterPagerControls button:hover:not(:disabled) {
+  background-color: #0080FF;
+}
+/*# sourceMappingURL=pillbuttons.css.map */
