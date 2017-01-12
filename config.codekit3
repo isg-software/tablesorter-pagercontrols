@@ -71,6 +71,12 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/examples\/english\/examples-defaultoptions.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-defaultoptions.html",
+		"oF": 0
+		},
 	"\/examples\/english\/examples-pillbuttons-customLabels.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -105,6 +111,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/examples\/english\/examples-standardbuttons.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-defaultoptions.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-defaultoptions.html",
 		"oF": 0
 		},
 	"\/examples\/german\/examples-pillbuttons-customLabels.html": {

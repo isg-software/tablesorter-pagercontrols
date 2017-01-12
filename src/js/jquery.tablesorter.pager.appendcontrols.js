@@ -32,7 +32,7 @@
 	$.fn.appendTablesorterPagerControls = function( options ) {
 	
 		var settings = $.extend({}, $.fn.appendTablesorterPagerControls.defaults, options);
-		var tooltips = $.extend({}, $.fn.appendTablesorterPagerControls.tooltips, options.tooltips);
+		var tooltips = options ? $.extend({}, $.fn.appendTablesorterPagerControls.tooltips, options.tooltips) : $.fn.appendTablesorterPagerControls.tooltips;
  
 		this.filter("table").each(function() {
 			var t = $(this);
