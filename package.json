@@ -1,6 +1,6 @@
 {
   "name": "tablesorter-pagercontrols",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This jQuery plug-in is an add-on for mottie's tablesorter, more explicitly its pager add-on. It programmatically adds pager controls below a table and applies the pager add-on for large HTML tables, so that you don't have to insert the controls to the HTML manually any more.",
   "main": "dist/js/jquery.tablesorter.pager.appendcontrols.english.min.js",
   "directories": {
