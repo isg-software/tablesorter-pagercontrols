@@ -33,6 +33,38 @@
 	
 		var settings = $.extend({}, $.fn.appendTablesorterPagerControls.defaults, options);
 		var tooltips = options ? $.extend({}, $.fn.appendTablesorterPagerControls.tooltips, options.tooltips) : $.fn.appendTablesorterPagerControls.tooltips;
+		
+		var btnFirst = '<button type="button" class="' + settings.classFirst + '" title="' + tooltips.first + '">' + settings.labelFirst + '</button>';
+		var btnPrev  = '<button type="button" class="' + settings.classPrev + '" title="' + tooltips.prev + '">' + settings.labelPrev + '</button>';
+		var btnNext  = '<button type="button" class="' + settings.classNext + '" title="' + tooltips.next + '">' + settings.labelNext + '</button>';
+		var btnLast  = '<button type="button" class="' + settings.classLast + '" title="' + tooltips.last + '">' + settings.labelLast + '</button>';
+
+		var display = function(id) {
+			var displayCommonAttribs = ' class="' + settings.classPagedisplay + '" id="' + id + '" title="' + tooltips.pagedisplay + '"';
+			if (settings.outputFiltered) {
+				displayCommonAttribs += ' data-pager-output-filtered="' + settings.outputFiltered + '"';
+			}		
+			return typeof settings.pagedisplayInputSize === 'number' && settings.pagedisplayInputSize > 0 ?
+					'<input type="text" size="' + settings.pagedisplayInputSize+ '" readonly name="'+id+'pgnr"' + displayCommonAttribs + '/>'
+					: '<span ' + displayCommonAttribs + '></span>';
+		};
+		
+		var sizeSelect = function(id) {
+			var selectId = id+"sel";
+			var s = '<select class="' + settings.classPagesize + '" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
+			for (var i = 0, o = settings.sizes.length; i < o; i++) {
+				var size = settings.sizes[i];
+				s += '<option value="' + size + '"';
+				if (size === settings.initialSize) {
+					s += ' selected';
+				}
+				s += '>' + size + '</option>';
+			}
+			s += '<option value="all">' + tooltips.all + '</option>' +
+				'</select> ' + 
+				'<label for="'+selectId+'">' + tooltips.rows + '</label>';
+			return s;
+		};
  
 		this.filter("table").each(function() {
 			var t = $(this);
@@ -48,34 +80,15 @@
 			//Only insert table pager if the table has more rows than this minimal pager size:
 			if (cntLines > settings.sizes[0]) {
 				var id = settings.prefix + idCounter++;
-				var selectId = id+"sel";
-				
-				var displayCommonAttribs = ' class="' + settings.classPagedisplay + '" id="' + id + '" title="' + tooltips.pagedisplay + '"';
-				if (settings.outputFiltered) {
-					displayCommonAttribs += ' data-pager-output-filtered="' + settings.outputFiltered + '"';
-				}
-				var display = typeof settings.pagedisplayInputSize === 'number' && settings.pagedisplayInputSize > 0 ?
-					'<input type="text" size="' + settings.pagedisplayInputSize+ '" readonly name="'+id+'pgnr"' + displayCommonAttribs + '/>'
-					: '<span ' + displayCommonAttribs + '></span>';
 
 				var controls = '<div id="' + id + '" class="' + settings.classControls + '">' +
-					'<button type="button" class="' + settings.classFirst + '" title="' + tooltips.first + '">' + settings.labelFirst + '</button>' +
-					'<button type="button" class="' + settings.classPrev + '" title="' + tooltips.prev + '">' + settings.labelPrev + '</button>' +
-					 display +
-					'<button type="button" class="' + settings.classNext + '" title="' + tooltips.next + '">' + settings.labelNext + '</button>' +
-					'<button type="button" class="' + settings.classLast + '" title="' + tooltips.last + '">' + settings.labelLast + '</button>' +
-					'<select class="' + settings.classPagesize + '" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
-				for (var i = 0, o = settings.sizes.length; i < o; i++) {
-					var size = settings.sizes[i];
-					controls += '<option value="' + size + '"';
-					if (size === settings.initialSize) {
-						controls += ' selected';
-					}
-					controls += '>' + size + '</option>';
-				}
-				controls += '<option value="all">' + tooltips.all + '</option>' +
-					'</select> ' +
-					'<label for="'+selectId+'">' + tooltips.rows + '</label></div>';
+					btnFirst +
+					btnPrev +
+					display(id) +
+					btnNext +
+					btnLast +
+					sizeSelect(id) +
+					'</div>';
 				
 				//Erst die Tabelle in ein DIV einfassen, dann hinter der Tabelle (vor dem </div>)
 				//die Controls einfügen.
