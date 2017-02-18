@@ -82,12 +82,13 @@
 				var id = settings.prefix + idCounter++;
 
 				var controls = '<div id="' + id + '" class="' + settings.classControls + '">' +
-					btnFirst +
-					btnPrev +
-					display(id) +
-					btnNext +
-					btnLast +
-					sizeSelect(id) +
+					settings.controlsOutput
+						.replace('{first}', btnFirst)
+						.replace('{prev}', btnPrev)
+						.replace('{next}', btnNext)
+						.replace('{last}', btnLast)
+						.replace('{display}', display(id))
+						.replace('{size}', sizeSelect(id)) +
 					'</div>';
 				
 				//Erst die Tabelle in ein DIV einfassen, dann hinter der Tabelle (vor dem </div>)
@@ -149,6 +150,7 @@
 			 * "sel" for the table size select box and "pgnr" for the input with the page number display.
 			 */
 			prefix: "tableSorterPager",
+			controlsOutput: '{first}{prev}{display}{next}{last}{size}',
 			/**
 			 * This output option is passed directly to the tablesorter pager plug-in. 
 			 * Defines the pattern of information to be displayed in the page display.
