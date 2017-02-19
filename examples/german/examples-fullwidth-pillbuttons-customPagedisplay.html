@@ -17,18 +17,19 @@
 	$(function() {
 		$("table")
 			.tablesorter({widthFixed: true, widgets: ['zebra']})
-			.appendTablesorterPagerControls($.extend({
-				sizes: [2, 10, 30, 100], 
-				initialSize: 10,
-				labelFirst: '|◀︎',
-				labelLast: '▶︎|',
-				labelPrev: '◀︎',
-				labelNext: '▶︎',
-				output: 'Seite # {page:input}/{totalPages}',
-				tooltips: {
-					pagedisplay: "angezeigte Seite (Nummer eingeben, um direkt zur Seite zu springen) / Seitenzahl gesamt"
-				}
-			}, $.fn.appendTablesorterPagerControls.templates.fullwidth));
+			.appendTablesorterPagerControls(
+				$.extend(
+					{	sizes: [2, 10, 30, 100], 
+						initialSize: 10,
+						output: 'Seite # {page:input}/{totalPages}',
+						tooltips: {
+							pagedisplay: "angezeigte Seite (Nummer eingeben, um direkt zur Seite zu springen) / Seitenzahl gesamt"
+						}
+					}, 
+					$.fn.appendTablesorterPagerControls.templates.fullwidth,
+					$.fn.appendTablesorterPagerControls.templates.triangleIcons
+				)
+			);
 	});
 	</script>
 </head>
@@ -47,23 +48,27 @@ angeordnet sind, werden im FullWidth-Modus die Buttons zum Zurückblättern link
 die zum Weiterblättern rechtsbündig und die Statusanzeige und Größenauswahl zentriert
 unter der Tabelle angeordnet.</p>
 
+<p>Ein zweites Template – <code>triangeIcons</code> – ersetzt die Standard-Buttonbeschriftungen
+durch alternative mit Unicode-Dreieckssymbolen.</p>
+
 <h1>Javascript</h1>
 <pre><code class="language-javascript">
 $(function() {
     $("table")
         .tablesorter({widthFixed: true, widgets: ['zebra']})
-        .appendTablesorterPagerControls($.extend({
-            sizes: [2, 10, 30, 100], 
-            initialSize: 10,
-            labelFirst: '|◀︎',
-            labelLast: '▶︎|',
-            labelPrev: '◀︎',
-            labelNext: '▶︎',
-            output: 'page # {page:input}/{totalPages}',
-            tooltips: {
-                pagedisplay: "angezeigte Seite (Nummer eingeben, um direkt zur Seite zu springen) / Seitenzahl gesamt"
-            }
-        }, $.fn.appendTablesorterPagerControls.templates.fullwidth));
+        .appendTablesorterPagerControls(
+            $.extend(
+                {   sizes: [2, 10, 30, 100], 
+                    initialSize: 10,
+                    output: 'Seite # {page:input}/{totalPages}',
+                    tooltips: {
+                        pagedisplay: "angezeigte Seite (Nummer eingeben, um direkt zur Seite zu springen) / Seitenzahl gesamt"
+                    }
+                }, 
+                $.fn.appendTablesorterPagerControls.templates.fullwidth,
+                $.fn.appendTablesorterPagerControls.templates.triangleIcons
+            )
+        );
 });</code></pre>
 
 <p>Nicht vergessen, bei Nutzung obigen Scriptcodes auch die Datei <code>fullwidth.css</code>

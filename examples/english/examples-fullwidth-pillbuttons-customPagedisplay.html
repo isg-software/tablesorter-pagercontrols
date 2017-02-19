@@ -17,18 +17,19 @@
 	$(function() {
 		$("table")
 			.tablesorter({widthFixed: true, widgets: ['zebra']})
-			.appendTablesorterPagerControls($.extend({
-				sizes: [2, 10, 30, 100], 
-				initialSize: 10,
-				labelFirst: '|◀︎',
-				labelLast: '▶︎|',
-				labelPrev: '◀︎',
-				labelNext: '▶︎',
-				output: 'page # {page:input}/{totalPages}',
-				tooltips: {
-					pagedisplay: "displayed page (enter page number to go to) / total pages"
-				}
-			}, $.fn.appendTablesorterPagerControls.templates.fullwidth));
+			.appendTablesorterPagerControls(
+				$.extend(
+					{	sizes: [2, 10, 30, 100], 
+						initialSize: 10,
+						output: 'page # {page:input}/{totalPages}',
+						tooltips: {
+							pagedisplay: "displayed page (enter page number to go to) / total pages"
+						}
+					}, 
+					$.fn.appendTablesorterPagerControls.templates.fullwidth,
+					$.fn.appendTablesorterPagerControls.templates.triangleIcons
+				)
+			);
 	});
 	</script>
 </head>
@@ -43,23 +44,27 @@ The predefined template <code>fullwidth</code> – in combination with the separ
 shows all the controls aligned to the left, in fullwidth mode the back buttons are on the left,
 the forward buttons on the right, display and size selection centered in between.</p>
 
+<p>A second template – <code>triangeIcons</code> – replaces the default button labels by 
+alternative ones with Unicode triangle characters.</p>
+
 <h1>Javascript</h1>
 <pre><code class="language-javascript">
 $(function() {
     $("table")
         .tablesorter({widthFixed: true, widgets: ['zebra']})
-        .appendTablesorterPagerControls($.extend({
-            sizes: [2, 10, 30, 100], 
-            initialSize: 10,
-            labelFirst: '|◀︎',
-            labelLast: '▶︎|',
-            labelPrev: '◀︎',
-            labelNext: '▶︎',
-            output: 'page # {page:input}/{totalPages}',
-            tooltips: {
-                pagedisplay: "displayed page (enter page number to go to) / total pages"
-            }
-        }, $.fn.appendTablesorterPagerControls.templates.fullwidth));
+        .appendTablesorterPagerControls(
+            $.extend(
+                {   sizes: [2, 10, 30, 100], 
+                    initialSize: 10,
+                    output: 'page # {page:input}/{totalPages}',
+                    tooltips: {
+                        pagedisplay: "displayed page (enter page number to go to) / total pages"
+                    }
+                }, 
+                $.fn.appendTablesorterPagerControls.templates.fullwidth,
+                $.fn.appendTablesorterPagerControls.templates.triangleIcons
+            )
+        );
 });</code></pre>
 
 <p>Don't forget to also include <code>fullwidth.css</code> in order to active the alignments,
