@@ -21,6 +21,22 @@
 		"oAP": "\/.npmignore",
 		"oF": 0
 		},
+	"\/dist\/css\/fullwidth.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/dist\/css\/fullwidth-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/dist\/css\/fullwidth.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/dist\/css\/fullwidth.css.map",
+		"oF": 0
+		},
 	"\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css": {
 		"aP": 0,
 		"bl": 0,
@@ -77,6 +93,18 @@
 		"oAP": "\/examples\/english\/examples-defaultoptions.html",
 		"oF": 0
 		},
+	"\/examples\/english\/examples-fullwidth-pillbuttons-customPagedisplay.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-fullwidth-pillbuttons-customPagedisplay.html",
+		"oF": 0
+		},
+	"\/examples\/english\/examples-fullwidth.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-fullwidth.html",
+		"oF": 0
+		},
 	"\/examples\/english\/examples-pillbuttons-customLabels.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -117,6 +145,18 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/examples\/german\/examples-defaultoptions.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-fullwidth-pillbuttons-customPagedisplay.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-fullwidth-pillbuttons-customPagedisplay.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-fullwidth.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-fullwidth.html",
 		"oF": 0
 		},
 	"\/examples\/german\/examples-pillbuttons-customLabels.html": {
@@ -225,6 +265,23 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/src\/less\/fullwidth.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/dist\/css\/fullwidth.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
 		},
 	"\/src\/less\/jquery.tablesorter.pager.appendcontrols.less": {
 		"aP": 0,
