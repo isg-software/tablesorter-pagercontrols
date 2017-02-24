@@ -120,6 +120,13 @@ The `appendTablesorterPagerControls()` method optionally takes an object as argu
          */
         prefix: "tableSorterPager",
         /**
+         * Pattern for the arrangement of the control elements. 
+         * {first}, {prev}, {next}, and {last} are placeholders for the navigation buttons,
+         * {size} will be replaced with the select box for selecting the number of visible rows,
+         * {display} stands for the status display as formatted with the output option.
+         */
+        controlsOutput: '{first}{prev}{display}{next}{last}{size}',
+        /**
          * This output option is passed directly to the tablesorter pager plug-in. 
          * Defines the pattern of information to be displayed in the page display.
          * (For details see the pager documentation.)
@@ -170,6 +177,7 @@ The `appendTablesorterPagerControls()` method optionally takes an object as argu
         /**
          * CSS class for a div element wrapped around the table and its pager controls. 
          * Defaults to 'tablesorterPagerWrapper'.
+         * May also be space-separated list of class names like in any class attribute of an HTML element.
          */
         classWrapper: "tablesorterPagerWrapper",
         /**
@@ -195,6 +203,38 @@ The `appendTablesorterPagerControls()` method optionally takes an object as argu
          */
         labelLast: "&gt;&gt;"
     };
+
+### Templates
+
+As said, you may call the jQuery plug-in with an object as argument holding those options you wish to override. If you want to repeatedly override a whole subset of options, you may aggregate these into template objects. Two predefined templates are included:
+
+
+    $.fn.appendTablesorterPagerControls.templates = {
+        /**
+         * Template for full-width controls: Backwards controls on the left,
+         * forwards controls on the right, size selection and display centered in between.
+         * Merge this object with you options object passed to the jQuery plug-in for a single call
+         * or into $.fn.appendTablesorterPagerControls.defaults in order to make this the default template.
+         * Requires CSS file fullwidth.css.
+         */
+        fullwidth: {
+            controlsOutput: '<div>{first}{prev}</div><div>{display} {size}</div><div>{next}{last}</div>',
+            classControls: "tablesorterPagerControls fullwidth"
+        },
+        /**
+         * Alternative set of button labels using Unicode left or right pointing triangles.
+         * Merge this object with you options object passed to the jQuery plug-in for a single call
+         * or into $.fn.appendTablesorterPagerControls.defaults in order to make this the default template.
+         */
+        triangleIcons: {
+            labelFirst: '|◀︎',
+            labelLast: '▶︎|',
+            labelPrev: '◀︎',
+            labelNext: '▶︎'
+        }
+    };
+
+The application of these templates is demonstrated in the examples.
 
 ## Examples
 

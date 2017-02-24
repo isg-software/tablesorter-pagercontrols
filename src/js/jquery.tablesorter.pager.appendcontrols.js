@@ -150,6 +150,12 @@
 			 * "sel" for the table size select box and "pgnr" for the input with the page number display.
 			 */
 			prefix: "tableSorterPager",
+			/**
+			 * Pattern for the arrangement of the control elements. 
+			 * {first}, {prev}, {next}, and {last} are placeholders for the navigation buttons,
+			 * {size} will be replaced with the select box for selecting the number of visible rows,
+			 * {display} stands for the status display as formatted with the output option.
+			 */
 			controlsOutput: '{first}{prev}{display}{next}{last}{size}',
 			/**
 			 * This output option is passed directly to the tablesorter pager plug-in. 
