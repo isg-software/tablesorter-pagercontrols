@@ -16,10 +16,10 @@
 	$(function() {
 		$("table")
 			.tablesorter({widthFixed: true, widgets: ['zebra']})
-			.appendTablesorterPagerControls($.extend({
+			.appendTablesorterPagerControls({
 				sizes: [2, 10, 30, 100], 
 				initialSize: 10
-			}, $.fn.appendTablesorterPagerControls.templates.fullwidth));
+			}, $.fn.appendTablesorterPagerControls.templates.fullwidth);
 	});
 	</script>
 </head>
@@ -28,8 +28,11 @@
 <div id="main">
 
 <p>This page demonstrates the application of a template, being an object with some options
-which may be merged into your options object with the <code>$.extend</code> method.
-The predefined template <code>fullwidth</code> – in combination with the separate CSS file
+which may be merged into your options object. You may simply pass more than one options object
+as argument to the plug-in call: These will be internally merged to one option set.
+So, in the example below, the example-specific options are combined with the fullwidth template.</p>
+
+<p>The predefined template <code>fullwidth</code> – in combination with the separate CSS file
 <code>fullwidth.css</code> – modifies the generated controls output: While the default
 shows all the controls aligned to the left, in fullwidth mode the back buttons are on the left,
 the forward buttons on the right, display and size selection centered in between.</p>
@@ -38,10 +41,10 @@ the forward buttons on the right, display and size selection centered in between
 <pre><code class="language-javascript">$(function() {
     $("table")
         .tablesorter({widthFixed: true, widgets: ['zebra']})
-        .appendTablesorterPagerControls($.extend({
+        .appendTablesorterPagerControls({
             sizes: [2, 10, 30, 100], 
             initialSize: 10
-        }, $.fn.appendTablesorterPagerControls.templates.fullwidth));
+        }, $.fn.appendTablesorterPagerControls.templates.fullwidth);
 });</code></pre>
 
 <p>Don't forget to also include <code>fullwidth.css</code> in order to active the alignments,

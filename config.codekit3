@@ -7,7 +7,7 @@
 		"uuidString": "8FBB6006-FCB2-4D37-8D3A-624FB123E9A0"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25568",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -239,6 +239,15 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/src\/js\/defaults.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/dist\/js\/defaults.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.english.js": {
 		"ft": 64,
 		"mi": 1,
@@ -262,6 +271,15 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/src\/js\/templates.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/dist\/js\/templates.min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -335,6 +353,20 @@
 			"linkedFileAbbreviatedPath": "\/src\/js\/jquery.tablesorter.pager.appendcontrols.js",
 			"position": 0,
 			"type": 0
+			}
+		],
+	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/defaults.js",
+			"position": 0,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/src\/js\/templates.js",
+			"position": 1,
+			"type": 1
 			}
 		]
 	},
@@ -1214,6 +1246,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -1542,6 +1578,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
 		"prefer-rest-params": {
 			"active": 0,
 			"optionString": ""
@@ -1635,6 +1675,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},

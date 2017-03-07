@@ -16,10 +16,10 @@
 	$(function() {
 		$("table")
 			.tablesorter({widthFixed: true, widgets: ['zebra']})
-			.appendTablesorterPagerControls($.extend({
+			.appendTablesorterPagerControls({
 				sizes: [2, 10, 30, 100], 
 				initialSize: 10
-			}, $.fn.appendTablesorterPagerControls.templates.fullwidth));
+			}, $.fn.appendTablesorterPagerControls.templates.fullwidth);
 	});
 	</script>
 </head>
@@ -27,9 +27,10 @@
 
 <div id="main">
 
-<p>Diese Seite demonstriert die Anwendung eines Templates. Dabei handelt es sich um ein 
-Objekt mit einer oder mehreren Optionen, die Sie zu Ihrem Optionsobjekt, das Sie dem
-Plug-in beim Aufruf mitgeben, mit Hilfe vor <code>$.extend</code> hinzufügen können.</p>
+<p>Diese Seite demonstriert die Anwendung eines Templates.
+Wenn Sie dem Plugin-Aufruf mehrere Objekte mit Optionen übergeben, werden diese intern
+zu einer Optionsmenge verschmolzen. Genau das wird bei unten stehendem Aufruf ausgenutzt: Es werden
+zwei Options-Objekte übergeben: Die Beispiel-individuellen Optionen und ein Template.</p>
 
 <p>Das mitgelieferte Template <code>fullwidth</code> – in Kombination mit der zusätzlichen
 CSS-Datei <code>fullwidth.css</code> – modifiziert das Ausgabemuster für die Anordnung der
@@ -42,10 +43,10 @@ unter der Tabelle angeordnet.</p>
 <pre><code class="language-javascript">$(function() {
     $("table")
         .tablesorter({widthFixed: true, widgets: ['zebra']})
-        .appendTablesorterPagerControls($.extend({
+        .appendTablesorterPagerControls({
             sizes: [2, 10, 30, 100], 
             initialSize: 10
-        }, $.fn.appendTablesorterPagerControls.templates.fullwidth));
+        }, $.fn.appendTablesorterPagerControls.templates.fullwidth);
 });</code></pre>
 
 <p>Nicht vergessen, bei Nutzung obigen Scriptcodes auch die Datei <code>fullwidth.css</code>
