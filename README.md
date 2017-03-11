@@ -96,9 +96,15 @@ Your HTML's head might look like this:
 
 The minified (distribution) script files include the main plug-in code as well as the tooltip definitions in one language. Therefore you'll find the script file in different versions, named after the tooltip language.
 
-If you want to include the unminified source scripts (e.g. for debugging purposes or if you've created a new language file and not yet compiled a new distribution file using it), you'll have to first load the main script file (`jquery.tablesorter.pager.appendcontrols.js`) followed by the language pack file (e.g. `jquery.tablesorter.pager.appendcontrols.english.js`).
+If you want to include the unminified source scripts (e.g. for debugging purposes or if you've created a new language file and not yet compiled a new distribution file using it), you'll have to first load the main script file (`jquery.tablesorter.pager.appendcontrols.js`) followed by the various other files like `defaults.js` and lastly the language pack file (e.g. `jquery.tablesorter.pager.appendcontrols.english.js`).
 
-The `appendTablesorterPagerControls()` method optionally takes an object as argument which overrides default options. The default options are defined as follows (and may also be globally overwritten):
+The `appendTablesorterPagerControls()` method optionally takes one or more objects as arguments which each may override default options. This means:
+
+* Calling the function without arguments applies the default options,
+* calling the function with one argument, this has to be an option containing all those options which you want to differ from the defaults.
+* If you call the function with more than one argument (e.g. one object with user-defined options and one or more so-called templates, globally defined option sets overriding some specific options), all these options objects will be merged into a copy of the defaults. I.e. the options in the first argument override defaults, options in the second argument may override options of the first argument and so on.
+
+The default options are defined as follows (and may also be globally overwritten):
 
     $.fn.appendTablesorterPagerControls.defaults = {
         /**
@@ -204,6 +210,8 @@ The `appendTablesorterPagerControls()` method optionally takes an object as argu
         labelLast: "&gt;&gt;"
     };
 
+[defaults.js](src/js/defaults.js)
+
 ### Templates
 
 As said, you may call the jQuery plug-in with an object as argument holding those options you wish to override. If you want to repeatedly override a whole subset of options, you may aggregate these into template objects. Two predefined templates are included:
@@ -233,6 +241,8 @@ As said, you may call the jQuery plug-in with an object as argument holding thos
             labelNext: '▶︎'
         }
     };
+
+[templates.js](src/js/templates.js)
 
 The application of these templates is demonstrated in the examples.
 
