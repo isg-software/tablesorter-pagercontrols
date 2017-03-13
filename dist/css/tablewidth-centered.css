@@ -1,0 +1,11 @@
+.tablesorterPagerWrapper {
+  text-align: center;
+}
+.tablesorterPagerWrapper .tablewidthInnerWrapper {
+  display: inline-block;
+}
+.tablesorterPagerWrapper .tablesorterPagerControls.fullwidth {
+  display: flex;
+  justify-content: space-between;
+}
+/*# sourceMappingURL=tablewidth-centered.css.map */

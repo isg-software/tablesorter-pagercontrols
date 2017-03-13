@@ -85,6 +85,17 @@
 			 */
 			classWrapper: "tablesorterPagerWrapper",
 			/**
+			 * CSS class for a div element wrapped around the table and its pager controls within the
+			 * wrapper of class 'classWrapper'. Defaults to null, in which case no inner wrapper is added.
+			 * If non-null, the table and its conrols will be wrapped doubly like:
+			 * <div class='classWrapper'><div class='classInnerWrapper'><table>...</table><div class='classControls'>...</div></div></div>.
+			 * By default, this inner div won't be added, but it can be used for some CSS tricks: So the outer wrapper
+			 * may be displayed as a block while the inner's display style may be set to 'inline-block' which
+			 * allows for example to align the controls to the right with the table even if the table is not full-width.
+			 * May also be space-separated list of class names like in any class attribute of an HTML element.
+			 */
+			classInnerWrapper: "tablesorterPagerWrapper",
+			/**
 			 * CSS class for a div element containing the table pager controls (inserted below the table). 
 			 * Defaults to 'tablesorterPagerControls'.
 			 * NOTE: If you change this value, the included CSS files will not work completely, but will have to be adapted to the new class name.

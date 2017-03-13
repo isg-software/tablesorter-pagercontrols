@@ -103,7 +103,11 @@
 				//Das Div dient dazu, CSS-Formatierungen wie display:inline-block zu ermöglichen, so dass
 				//in diesem inline-block die Controls z.B. rechtsbündung unter dem rechten Tabellenrand 
 				//angeordnet werden können.
-				t.wrap('<div class="' + settings.classWrapper + '"></div>').after(controls);
+				t.wrap('<div class="' + settings.classWrapper + '"></div>');
+				if (typeof settings.classInnerWrapper === 'string') {
+					t.wrap('<div class="' + settings.classInnerWrapper + '"></div>');
+				}
+				t.after(controls);
 				
 				var container = $("#" + id);
 				t.tablesorterPager({

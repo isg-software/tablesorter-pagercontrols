@@ -1,0 +1,8 @@
+.tablewidthInnerWrapper {
+  display: inline-block;
+}
+.tablesorterPagerControls.fullwidth {
+  display: flex;
+  justify-content: space-between;
+}
+/*# sourceMappingURL=tablewidth.css.map */

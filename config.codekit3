@@ -7,7 +7,7 @@
 		"uuidString": "8FBB6006-FCB2-4D37-8D3A-624FB123E9A0"
 		}
 	],
-"creatorBuild": "25568",
+"creatorBuild": "25704",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -67,6 +67,38 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/dist\/css\/pillbuttons.css.map",
+		"oF": 0
+		},
+	"\/dist\/css\/tablewidth-centered.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/dist\/css\/tablewidth-centered-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/dist\/css\/tablewidth-centered.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/dist\/css\/tablewidth-centered.css.map",
+		"oF": 0
+		},
+	"\/dist\/css\/tablewidth.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/dist\/css\/tablewidth-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/dist\/css\/tablewidth.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/dist\/css\/tablewidth.css.map",
 		"oF": 0
 		},
 	"\/dist\/js\/jquery.tablesorter.pager.appendcontrols.english.min.js": {
@@ -141,6 +173,18 @@
 		"oAP": "\/examples\/english\/examples-standardbuttons.html",
 		"oF": 0
 		},
+	"\/examples\/english\/examples-tablewidth-centered-pillbuttons-customPagedisplay.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-tablewidth-centered-pillbuttons-customPagedisplay.html",
+		"oF": 0
+		},
+	"\/examples\/english\/examples-tablewidth.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/english\/examples-tablewidth.html",
+		"oF": 0
+		},
 	"\/examples\/german\/examples-defaultoptions.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -193,6 +237,18 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/examples\/german\/examples-standardbuttons.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-tablewidth-centered-pillbuttons-customPagedisplay.html.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-tablewidth-centered-pillbuttons-customPagedisplay.html.html",
+		"oF": 0
+		},
+	"\/examples\/german\/examples-tablewidth.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/examples\/german\/examples-tablewidth.html",
 		"oF": 0
 		},
 	"\/LICENSE": {
@@ -294,7 +350,7 @@
 		"ma": 1,
 		"oA": 0,
 		"oAP": "\/dist\/css\/fullwidth.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
@@ -329,6 +385,40 @@
 		"oA": 0,
 		"oAP": "\/dist\/css\/pillbuttons.css",
 		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/src\/less\/tablewidth-centered.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/dist\/css\/tablewidth-centered.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/src\/less\/tablewidth.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/dist\/css\/tablewidth.css",
+		"oF": 1,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
@@ -1046,6 +1136,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-cond-assign": {
 			"active": 1,
 			"optionString": "'except-parens'"
@@ -1525,6 +1619,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"object-curly-newline": {
 			"active": 0,
@@ -2125,7 +2223,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -2218,7 +2317,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"enableLossy": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
