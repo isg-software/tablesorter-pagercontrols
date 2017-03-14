@@ -45,8 +45,16 @@ So, in the example below, the example-specific options are combined with two tem
 shows all the controls aligned to the left, in fullwidth mode the back buttons are on the left,
 the forward buttons on the right, display and size selection centered in between.</p>
 
+<p><em>This template relies on any table each spanning the whole page width (100% width)!</em>
+If the tables may be narrower, see template <code>tablewidth</code>!</p>
+
 <p>A second template – <code>triangeIcons</code> – replaces the default button labels by 
-alternative ones with Unicode triangle characters.</p>
+alternative ones with Unicode triangle characters.
+<em>Please note that—in difference to the default settings—this template uses Unicode Characters
+as button labels.</em> The template file is UTF-8 encoded. As this example page also uses UTF-8 encoding,
+that matches perfectly. If your HTML file uses a different encoding, you should add the attribute
+<code>charset="utf-8"</code> to the <code>script</code> tag which loads the script file jquery.tablesorter.pager.appendcontrols.english.min.js!
+</p>
 
 <h1>Javascript</h1>
 <pre><code class="language-javascript">$(function() {

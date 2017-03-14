@@ -54,7 +54,13 @@ dass die Inline-Blocks mit Tabellen und Controls ihrerseits innerhalb der Seite 
 sofern sie schmaler sind als die Seite.</p>
 
 <p>Ein zweites Template – <code>triangeIcons</code> – ersetzt die Standard-Buttonbeschriftungen
-durch alternative mit Unicode-Dreieckssymbolen.</p>
+durch alternative mit Unicode-Dreieckssymbolen.
+<em>Beachten Sie dabei, dass dieses Template – anders als die Standardeinstellungen – Unicode-Zeichen
+für die Buttonbeschriftungen verwendet!</em> Die JavaScript-Datei ist dazu UTF-8-kodiert. Da auch diese
+Beispiel-HTML-Seite UTF-8 verwendet, passt das zusammen. Beim Einbinden in eine anders kodierte HTML-Datei
+sollten Sie dagegen das Attribut <code>charset="utf-8"</code> zum <code>script</code>-Tag hinzufügen, mit dem
+Sie die Skriptdatei jquery.tablesorter.pager.appendcontrols.german.min.js laden!
+</p>
 
 <h1>Javascript</h1>
 <pre><code class="language-javascript">$(function() {

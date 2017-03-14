@@ -54,7 +54,13 @@ are narrower than the page.</p>
 
 
 <p>A second template – <code>triangeIcons</code> – replaces the default button labels by 
-alternative ones with Unicode triangle characters.</p>
+alternative ones with Unicode triangle characters.
+<em>Please note that—in difference to the default settings—this template uses Unicode Characters
+as button labels.</em> The template file is UTF-8 encoded. As this example page also uses UTF-8 encoding,
+that matches perfectly. If your HTML file uses a different encoding, you should add the attribute
+<code>charset="utf-8"</code> to the <code>script</code> tag which loads the script file jquery.tablesorter.pager.appendcontrols.english.min.js!
+</p>
+
 
 <h1>Javascript</h1>
 <pre><code class="language-javascript">$(function() {
