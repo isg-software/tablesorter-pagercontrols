@@ -110,7 +110,15 @@
 				t.after(controls);
 				
 				var container = $("#" + id);
-				t.tablesorterPager({
+				t.on("pagerComplete", function(ev, opts) {
+					var pageCnt = typeof opts.filteredPages === 'number' ? opts.filteredPages : opts.totalPages;
+					$("#" + id + " button." + settings.classPrev + ", #" + id + " button." + settings.classFirst)
+						.prop("disabled", opts.page === 0);
+					$("#" + id + " button." + settings.classNext + ", #" + id + " button." + settings.classLast)
+						.prop("disabled", opts.page >= pageCnt - 1);
+						//use >= instead of ===
+						//reason: if table is empty (e.g. filtered), pageCnt may be 0, pageCnt-1 thus negative, while opts.page is 0 (greater -1)!
+				}).tablesorterPager({
 					container: container,
 					size: settings.initialSize,
 					offset: 0,
@@ -123,15 +131,7 @@
 					cssPageSize: '.' + settings.classPagesize,
 					output: settings.output, 
 					positionFixed: false
-				}).on("pagerComplete", function(ev, opts) {
-					var pageCnt = typeof opts.filteredPages === 'number' ? opts.filteredPages : opts.totalPages;
-					$("#" + id + " button." + settings.classPrev + ", #" + id + " button." + settings.classFirst)
-						.prop("disabled", opts.page === 0);
-					$("#" + id + " button." + settings.classNext + ", #" + id + " button." + settings.classLast)
-						.prop("disabled", opts.page >= pageCnt - 1);
-						//use >= instead of ===
-						//reason: if table is empty (e.g. filtered), pageCnt may be 0, pageCnt-1 thus negative, while opts.page is 0 (greater -1)!
-				}).trigger("pagerComplete", [{page: 0, totalPages: cntLines / settings.initialSize}]);
+				});
 			}
 		});
  
