@@ -94,7 +94,7 @@
 			 * allows for example to align the controls to the right with the table even if the table is not full-width.
 			 * May also be space-separated list of class names like in any class attribute of an HTML element.
 			 */
-			classInnerWrapper: "tablesorterPagerWrapper",
+			classInnerWrapper: null,
 			/**
 			 * CSS class for a div element containing the table pager controls (inserted below the table). 
 			 * Defaults to 'tablesorterPagerControls'.
