@@ -41,6 +41,18 @@
 			labelLast: '▶︎|',
 			labelPrev: '◀︎',
 			labelNext: '▶︎'
+		},
+		/**
+		 * Wraps the table into a DIV of class 'scroll'. The included 'scrolling.css' is loaded,
+		 * this will result in the addition of a horizontal scrollbar for the table in case it should
+		 * be too wide for the viewport. (While normally the whole page would get wider and horizontally scrollable,
+		 * now the page keeps its normal width and the table scrolls inside the page. The pager controls
+		 * added beneath the table won't scroll with it but will always stay in viewport.)
+		 * If the table fits the page width, this won't change anything.
+		 * Requires CSS file scrolling.css to work.
+		 */
+		scrolling: {
+			classTableWrapper: "scroll"
 		}
 	};
  

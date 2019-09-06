@@ -94,7 +94,23 @@
 			 * allows for example to align the controls to the right with the table even if the table is not full-width.
 			 * May also be space-separated list of class names like in any class attribute of an HTML element.
 			 */
-			classInnerWrapper: "tablesorterPagerWrapper",
+			classInnerWrapper: null,
+			/**
+			 * CSS class for a div element wrapped around the table only (inside the optional innerWrapper).
+			 * Defaults to null, in which case no such table wrapper is added.
+			 * If non-null, the table will be wrapped like this:
+			 * <div class='classWrapper'><div class='classTableWrapper'><table>...</table></div><div class='classControls'>...</div></div>.
+			 * Or, if the classInnerWrapper is also non-null:
+			 * <div class='classWrapper'><div class='classInnerWrapper'><div class='classTableWrapper'><table>...</table></div><div class='classControls'>...</div></div></div>.
+			 * So, by default this table wrapper won't be added, but it may be added for some CSS formatting.
+			 * It's especially useful if you may have very wide table and want them to be horizontally scrollable.
+			 * In this case, you may set this option and introduce a CSS rule setting overflow-x: scroll for the table wrapper.
+			 * That way, the table itself will be scrollable (if wider that the viewport) while the table pager controls beneath
+			 * it (as well as content above the table or beneath the pager controls) will stay fixed and won't scroll left or right
+			 * with the table, i.e. the user will always see and will always be able to operate the pager regardless of
+			 * the horizontal scroll position of the table.
+			 */
+			classTableWrapper: null,
 			/**
 			 * CSS class for a div element containing the table pager controls (inserted below the table). 
 			 * Defaults to 'tablesorterPagerControls'.
