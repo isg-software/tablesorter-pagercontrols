@@ -107,7 +107,12 @@
 				if (typeof settings.classInnerWrapper === 'string') {
 					t.wrap('<div class="' + settings.classInnerWrapper + '"></div>');
 				}
-				t.after(controls);
+				var appendTo = t;
+				if (typeof settings.classTableWrapper === 'string') {
+					t.wrap('<div class="' + settings.classTableWrapper + '"></div>');
+					appendTo = t.parent();
+				}
+				appendTo.after(controls);
 				
 				var container = $("#" + id);
 				t.on("pagerComplete", function(ev, opts) {

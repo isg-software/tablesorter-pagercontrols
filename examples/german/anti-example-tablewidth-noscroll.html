@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery plugin: AppendControls for Tablesorter Pager plugin</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../../node_modules/tablesorter/dist/css/theme.blue.css" type="text/css">
+	
+	<script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
+	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
+	<script type="text/javascript" src="../../dist/js/jquery.tablesorter.pager.appendcontrols.english.min.js"></script>
+	<link rel="stylesheet" href="../../dist/css/jquery.tablesorter.pager.appendcontrols.css" type="text/css">
+	<link rel="stylesheet" href="../../dist/css/tablewidth.css" type="text/css">
+	
+	<script type="text/javascript">
+	$(function() {
+		$("table")
+			.tablesorter({widthFixed: true, widgets: ['zebra']})
+			.appendTablesorterPagerControls({
+				sizes: [2, 10, 30, 100], 
+				initialSize: 10
+			}, 
+			$.fn.appendTablesorterPagerControls.templates.tablewidth,
+			);
+	});
+	</script>
+	<style type="text/css">
+		td {white-space: nowrap;}
+	</style>
+</head>
+<body>
+
+<div id="main">
+
+<p>Diese Seite enthält dieselbe überbreite Tabelle wie <a href="examples-fullwidth-scroll.html">examples-fullwidth-scroll.html</a>, 
+	aber sie lädt <em>nicht</em> das <code>scrolling</code>-Template dazu, auch nicht <code>fullwidth</code>, sondern
+	vielmehr <code>tablewidth</code>.
+</p>
+<p>
+	Wenn das Browserfenster nun schmaler als die (breite) Tabelle ist, entsteht eine überbreite Seite, die
+	horizontal gescrollt werden kann.
+	Dabei ergibt sich aber ein großes Problem gerade in Kombination mit dem <code>tablewidth</code>-Template, das ja
+	die Pager-Buttons an der Tabelle ausrichtet: Die Buttons zum Weiterblättern stehen am rechten Tabellenrand und
+	sind daher zunächst gar nicht erreichbar, man muss erst ganz nach rechts scrollen, um weiterblättern zu können.
+	Dann muss man wiederum erst ganz nach links scrollen, um wieder rückwärts durch die Tabelle blättern zu können!
+</p>
+
+<p>Dies ist also offensichtlich eine sehr ungünstige Konfiguration.
+	Für möglicherweise überbreite Tabellen sollte zunächst das <code>tablewidth</code>-Template nicht verwendet werden,
+	sondern eher das <code>fullwidth</code>-Template. Aber auch dann würde die ganze Seite scrollen, und man
+	könnte nur durch die Tabelle blättern, wenn man ganz nach links gescrollt hat.
+	Die Demo-Seite <a href="examples-fullwidth-scroll.html">examples-fullwidth-scroll.html</a>
+	wendet daher zusätzlich das <code>scrolling</code>-Template an, mit dem allein die Tabelle gescrollt werden kann,
+	wobei der Rest der Seite einschließlich der Pager-Buttons immer im Viewport bleibt.
+</p>
+
+
+
+<h1>The Table</h1>
+<table class="tablesorter tablesorter-blue">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Major</th>
+			<th>Sex</th>
+			<th>English</th>
+			<th>Japanese</th>
+			<th>Calculus</th>
+			<th>Geometry</th>
+			<th>More</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Student01</td>
+			<td>Languages</td>
+			<td>male</td>
+
+			<td>80</td>
+			<td>70</td>
+			<td>75</td>
+			<td>80</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student02</td>
+
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>90</td>
+			<td>88</td>
+			<td>100</td>
+			<td>90</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student03</td>
+			<td>Languages</td>
+			<td>female</td>
+			<td>85</td>
+			<td>95</td>
+
+			<td>80</td>
+			<td>85</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student04</td>
+			<td>Languages</td>
+			<td>male</td>
+
+			<td>60</td>
+			<td>55</td>
+			<td>100</td>
+			<td>100</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student05</td>
+
+			<td>Languages</td>
+			<td>female</td>
+			<td>68</td>
+			<td>80</td>
+			<td>95</td>
+			<td>80</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student06</td>
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>100</td>
+			<td>99</td>
+
+			<td>100</td>
+			<td>90</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student07</td>
+			<td>Mathematics</td>
+			<td>male</td>
+
+			<td>85</td>
+			<td>68</td>
+			<td>90</td>
+			<td>90</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student08</td>
+
+			<td>Languages</td>
+			<td>male</td>
+			<td>100</td>
+			<td>90</td>
+			<td>90</td>
+			<td>85</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student09</td>
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>80</td>
+			<td>50</td>
+
+			<td>65</td>
+			<td>75</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student10</td>
+			<td>Languages</td>
+			<td>male</td>
+
+			<td>85</td>
+			<td>100</td>
+			<td>100</td>
+			<td>90</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Student11</td>
+
+			<td>Languages</td>
+			<td>male</td>
+			<td>86</td>
+			<td>85</td>
+			<td>100</td>
+			<td>100</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Student12</td>
+			<td>Mathematics</td>
+			<td>female</td>
+			<td>100</td>
+			<td>75</td>
+
+			<td>70</td>
+			<td>85</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student13</td>
+			<td>Languages</td>
+			<td>female</td>
+
+			<td>100</td>
+			<td>80</td>
+			<td>100</td>
+			<td>90</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student14</td>
+
+			<td>Languages</td>
+			<td>female</td>
+			<td>50</td>
+			<td>45</td>
+			<td>55</td>
+			<td>90</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student15</td>
+			<td>Languages</td>
+			<td>male</td>
+			<td>95</td>
+			<td>35</td>
+
+			<td>100</td>
+			<td>90</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student16</td>
+			<td>Languages</td>
+			<td>female</td>
+
+			<td>100</td>
+			<td>50</td>
+			<td>30</td>
+			<td>70</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student17</td>
+
+			<td>Languages</td>
+			<td>female</td>
+			<td>80</td>
+			<td>100</td>
+			<td>55</td>
+			<td>65</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student18</td>
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>30</td>
+			<td>49</td>
+
+			<td>55</td>
+			<td>75</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student19</td>
+			<td>Languages</td>
+			<td>male</td>
+
+			<td>68</td>
+			<td>90</td>
+			<td>88</td>
+			<td>70</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		</tbody>
+</table>
+
+
+</div>
+
+</body>
+</html>
+

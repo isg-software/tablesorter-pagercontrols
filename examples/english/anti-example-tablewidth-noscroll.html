@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery plugin: AppendControls for Tablesorter Pager plugin</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../../node_modules/tablesorter/dist/css/theme.blue.css" type="text/css">
+	
+	<script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
+	<script type="text/javascript" src="../../node_modules/tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
+	<script type="text/javascript" src="../../dist/js/jquery.tablesorter.pager.appendcontrols.english.min.js"></script>
+	<link rel="stylesheet" href="../../dist/css/jquery.tablesorter.pager.appendcontrols.css" type="text/css">
+	<link rel="stylesheet" href="../../dist/css/tablewidth.css" type="text/css">
+	
+	<script type="text/javascript">
+	$(function() {
+		$("table")
+			.tablesorter({widthFixed: true, widgets: ['zebra']})
+			.appendTablesorterPagerControls({
+				sizes: [2, 10, 30, 100], 
+				initialSize: 10
+			}, 
+			$.fn.appendTablesorterPagerControls.templates.tablewidth,
+			);
+	});
+	</script>
+	<style type="text/css">
+		td {white-space: nowrap;}
+	</style>
+</head>
+<body>
+
+<div id="main">
+
+<p>This example page holds the same table as <a href="examples-fullwidth-scroll.html">examples-fullwidth-scroll.html</a>, only it 
+	<em>does not</em> use the <code>scrolling</code> or <code>fullwidth</code> template, but it <em>does</em> use the
+	<code>tablewidth</code> template.</p>
+<p>
+	If the window is narrower than the table, this results in a whole page that is scrollable in order
+	to be able to see the whole table. But as you can see here, there's a problem: 
+	Since the pager buttons in tablewidth preset are aligned with the table, and if your window is narrower
+	that the table, you can't even see the buttons for switching to the next pages without scrolling all the way to the right.
+	And if you do so, you'll have to scroll back to the left in order to reach the buttons for switching to
+	previous pages.
+</p>
+
+<p>So this is clearly not a good configuration.
+	For tables this wide which might overflow, the template <code>scrolling</code> is much better suited,
+	which may optionally be combined with the <code>fullwidth</code> template as demonstrated in
+	<a href="examples-fullwidth-scroll.html">examples-fullwidth-scroll.html</code>.</p>
+
+
+
+<h1>The Table</h1>
+<table class="tablesorter tablesorter-blue">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Major</th>
+			<th>Sex</th>
+			<th>English</th>
+			<th>Japanese</th>
+			<th>Calculus</th>
+			<th>Geometry</th>
+			<th>More</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Student01</td>
+			<td>Languages</td>
+			<td>male</td>
+
+			<td>80</td>
+			<td>70</td>
+			<td>75</td>
+			<td>80</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student02</td>
+
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>90</td>
+			<td>88</td>
+			<td>100</td>
+			<td>90</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student03</td>
+			<td>Languages</td>
+			<td>female</td>
+			<td>85</td>
+			<td>95</td>
+
+			<td>80</td>
+			<td>85</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student04</td>
+			<td>Languages</td>
+			<td>male</td>
+
+			<td>60</td>
+			<td>55</td>
+			<td>100</td>
+			<td>100</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student05</td>
+
+			<td>Languages</td>
+			<td>female</td>
+			<td>68</td>
+			<td>80</td>
+			<td>95</td>
+			<td>80</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student06</td>
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>100</td>
+			<td>99</td>
+
+			<td>100</td>
+			<td>90</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student07</td>
+			<td>Mathematics</td>
+			<td>male</td>
+
+			<td>85</td>
+			<td>68</td>
+			<td>90</td>
+			<td>90</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student08</td>
+
+			<td>Languages</td>
+			<td>male</td>
+			<td>100</td>
+			<td>90</td>
+			<td>90</td>
+			<td>85</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student09</td>
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>80</td>
+			<td>50</td>
+
+			<td>65</td>
+			<td>75</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student10</td>
+			<td>Languages</td>
+			<td>male</td>
+
+			<td>85</td>
+			<td>100</td>
+			<td>100</td>
+			<td>90</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Student11</td>
+
+			<td>Languages</td>
+			<td>male</td>
+			<td>86</td>
+			<td>85</td>
+			<td>100</td>
+			<td>100</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Student12</td>
+			<td>Mathematics</td>
+			<td>female</td>
+			<td>100</td>
+			<td>75</td>
+
+			<td>70</td>
+			<td>85</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student13</td>
+			<td>Languages</td>
+			<td>female</td>
+
+			<td>100</td>
+			<td>80</td>
+			<td>100</td>
+			<td>90</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student14</td>
+
+			<td>Languages</td>
+			<td>female</td>
+			<td>50</td>
+			<td>45</td>
+			<td>55</td>
+			<td>90</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student15</td>
+			<td>Languages</td>
+			<td>male</td>
+			<td>95</td>
+			<td>35</td>
+
+			<td>100</td>
+			<td>90</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student16</td>
+			<td>Languages</td>
+			<td>female</td>
+
+			<td>100</td>
+			<td>50</td>
+			<td>30</td>
+			<td>70</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		<tr>
+			<td>Student17</td>
+
+			<td>Languages</td>
+			<td>female</td>
+			<td>80</td>
+			<td>100</td>
+			<td>55</td>
+			<td>65</td>
+			<td>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</td>
+		</tr>
+		<tr>
+			<td>Student18</td>
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>30</td>
+			<td>49</td>
+
+			<td>55</td>
+			<td>75</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student19</td>
+			<td>Languages</td>
+			<td>male</td>
+
+			<td>68</td>
+			<td>90</td>
+			<td>88</td>
+			<td>70</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+		</tbody>
+</table>
+
+
+</div>
+
+</body>
+</html>
+
