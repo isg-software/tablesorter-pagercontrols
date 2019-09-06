@@ -1,5 +1,5 @@
 {
-"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
 "buildSteps": [
 	{
 		"name": "Process All Remaining Files and Folders",
@@ -7,286 +7,387 @@
 		"uuidString": "8FBB6006-FCB2-4D37-8D3A-624FB123E9A0"
 		}
 	],
-"creatorBuild": "25704",
+"creatorBuild": "31491",
 "files": {
-	"\/.gitignore": {
+	"/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/.gitignore",
+		"oAP": "/.gitignore",
 		"oF": 0
 		},
-	"\/.npmignore": {
+	"/.npmignore": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/.npmignore",
+		"oAP": "/.npmignore",
 		"oF": 0
 		},
-	"\/dist\/css\/fullwidth.css": {
+	"/dist/css/fullwidth.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/fullwidth-min.css",
+		"oAP": "/dist/css/fullwidth-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/dist\/css\/fullwidth.css.map": {
+	"/dist/css/fullwidth.css.map": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/fullwidth.css.map",
+		"oAP": "/dist/css/fullwidth.css.map",
 		"oF": 0
 		},
-	"\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css": {
+	"/dist/css/jquery.tablesorter.pager.appendcontrols.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/jquery.tablesorter.pager.appendcontrols-min.css",
+		"oAP": "/dist/css/jquery.tablesorter.pager.appendcontrols-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css.map": {
+	"/dist/css/jquery.tablesorter.pager.appendcontrols.css.map": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css.map",
+		"oAP": "/dist/css/jquery.tablesorter.pager.appendcontrols.css.map",
 		"oF": 0
 		},
-	"\/dist\/css\/pillbuttons.css": {
+	"/dist/css/pillbuttons.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/pillbuttons-min.css",
+		"oAP": "/dist/css/pillbuttons-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/dist\/css\/pillbuttons.css.map": {
+	"/dist/css/pillbuttons.css.map": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/pillbuttons.css.map",
+		"oAP": "/dist/css/pillbuttons.css.map",
 		"oF": 0
 		},
-	"\/dist\/css\/tablewidth-centered.css": {
+	"/dist/css/scrolling.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/tablewidth-centered-min.css",
+		"oAP": "/dist/css/scrolling-min.css",
 		"oF": 0,
-		"oS": 0
+		"oS": 3
 		},
-	"\/dist\/css\/tablewidth-centered.css.map": {
+	"/dist/css/scrolling.css.map": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/tablewidth-centered.css.map",
+		"oAP": "/dist/css/scrolling.css.map",
 		"oF": 0
 		},
-	"\/dist\/css\/tablewidth.css": {
+	"/dist/css/tablewidth-centered.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/tablewidth-min.css",
+		"oAP": "/dist/css/tablewidth-centered-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/dist\/css\/tablewidth.css.map": {
+	"/dist/css/tablewidth-centered.css.map": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/dist\/css\/tablewidth.css.map",
+		"oAP": "/dist/css/tablewidth-centered.css.map",
 		"oF": 0
 		},
-	"\/dist\/js\/jquery.tablesorter.pager.appendcontrols.english.min.js": {
+	"/dist/css/tablewidth.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/dist/css/tablewidth-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"/dist/css/tablewidth.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/dist/css/tablewidth.css.map",
+		"oF": 0
+		},
+	"/dist/js/jquery.tablesorter.pager.appendcontrols.english.min.js": {
+		"bF": 0,
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.english.min.min.js",
+		"oAP": "/dist/js/jquery.tablesorter.pager.appendcontrols.english.min.min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 3,
 		"tS": 0
 		},
-	"\/dist\/js\/jquery.tablesorter.pager.appendcontrols.german.min.js": {
+	"/dist/js/jquery.tablesorter.pager.appendcontrols.german.min.js": {
+		"bF": 0,
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.german.min.min.js",
+		"oAP": "/dist/js/jquery.tablesorter.pager.appendcontrols.german.min.min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 3,
 		"tS": 0
 		},
-	"\/examples\/english\/examples-defaultoptions.html": {
+	"/examples/english/anti-example-tablewidth-noscroll.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-defaultoptions.html",
+		"oAP": "/examples/english/anti-example-tablewidth-noscroll.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-fullwidth-pillbuttons-customPagedisplay.html": {
+	"/examples/english/examples-defaultoptions.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-fullwidth-pillbuttons-customPagedisplay.html",
+		"oAP": "/examples/english/examples-defaultoptions.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-fullwidth.html": {
+	"/examples/english/examples-fullwidth-pillbuttons-customPagedisplay.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-fullwidth.html",
+		"oAP": "/examples/english/examples-fullwidth-pillbuttons-customPagedisplay.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-pillbuttons-customLabels.html": {
+	"/examples/english/examples-fullwidth-scroll.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-pillbuttons-customLabels.html",
+		"oAP": "/examples/english/examples-fullwidth-scroll.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-pillbuttons-customPagedisplay.html": {
+	"/examples/english/examples-fullwidth.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-pillbuttons-customPagedisplay.html",
+		"oAP": "/examples/english/examples-fullwidth.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-pillbuttons-filter.html": {
+	"/examples/english/examples-pillbuttons-customLabels.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-pillbuttons-filter.html",
+		"oAP": "/examples/english/examples-pillbuttons-customLabels.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-pillbuttons.html": {
+	"/examples/english/examples-pillbuttons-customPagedisplay.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-pillbuttons.html",
+		"oAP": "/examples/english/examples-pillbuttons-customPagedisplay.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-standardbuttons-inputPagedisplay.html": {
+	"/examples/english/examples-pillbuttons-filter.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-standardbuttons-inputPagedisplay.html",
+		"oAP": "/examples/english/examples-pillbuttons-filter.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-standardbuttons.html": {
+	"/examples/english/examples-pillbuttons.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-standardbuttons.html",
+		"oAP": "/examples/english/examples-pillbuttons.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-tablewidth-centered-pillbuttons-customPagedisplay.html": {
+	"/examples/english/examples-standardbuttons-inputPagedisplay.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-tablewidth-centered-pillbuttons-customPagedisplay.html",
+		"oAP": "/examples/english/examples-standardbuttons-inputPagedisplay.html",
 		"oF": 0
 		},
-	"\/examples\/english\/examples-tablewidth.html": {
+	"/examples/english/examples-standardbuttons.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/english\/examples-tablewidth.html",
+		"oAP": "/examples/english/examples-standardbuttons.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-defaultoptions.html": {
+	"/examples/english/examples-tablewidth-centered-pillbuttons-customPagedisplay.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-defaultoptions.html",
+		"oAP": "/examples/english/examples-tablewidth-centered-pillbuttons-customPagedisplay.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-fullwidth-pillbuttons-customPagedisplay.html": {
+	"/examples/english/examples-tablewidth.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-fullwidth-pillbuttons-customPagedisplay.html",
+		"oAP": "/examples/english/examples-tablewidth.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-fullwidth.html": {
+	"/examples/german/examples-defaultoptions.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-fullwidth.html",
+		"oAP": "/examples/german/examples-defaultoptions.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-pillbuttons-customLabels.html": {
+	"/examples/german/examples-fullwidth-pillbuttons-customPagedisplay.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-pillbuttons-customLabels.html",
+		"oAP": "/examples/german/examples-fullwidth-pillbuttons-customPagedisplay.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-pillbuttons-customPagedisplay.html": {
+	"/examples/german/examples-fullwidth.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-pillbuttons-customPagedisplay.html",
+		"oAP": "/examples/german/examples-fullwidth.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-pillbuttons-filter.html": {
+	"/examples/german/examples-pillbuttons-customLabels.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-pillbuttons-filter.html",
+		"oAP": "/examples/german/examples-pillbuttons-customLabels.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-pillbuttons.html": {
+	"/examples/german/examples-pillbuttons-customPagedisplay.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-pillbuttons.html",
+		"oAP": "/examples/german/examples-pillbuttons-customPagedisplay.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-standardbuttons-inputPagedisplay.html": {
+	"/examples/german/examples-pillbuttons-filter.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-standardbuttons-inputPagedisplay.html",
+		"oAP": "/examples/german/examples-pillbuttons-filter.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-standardbuttons.html": {
+	"/examples/german/examples-pillbuttons.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-standardbuttons.html",
+		"oAP": "/examples/german/examples-pillbuttons.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-tablewidth-centered-pillbuttons-customPagedisplay.html": {
+	"/examples/german/examples-standardbuttons-inputPagedisplay.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-tablewidth-centered-pillbuttons-customPagedisplay.html",
+		"oAP": "/examples/german/examples-standardbuttons-inputPagedisplay.html",
 		"oF": 0
 		},
-	"\/examples\/german\/examples-tablewidth.html": {
+	"/examples/german/examples-standardbuttons.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/examples\/german\/examples-tablewidth.html",
+		"oAP": "/examples/german/examples-standardbuttons.html",
 		"oF": 0
 		},
-	"\/LICENSE": {
+	"/examples/german/examples-tablewidth-centered-pillbuttons-customPagedisplay.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/LICENSE",
+		"oAP": "/examples/german/examples-tablewidth-centered-pillbuttons-customPagedisplay.html",
 		"oF": 0
 		},
-	"\/node_modules": {
+	"/examples/german/examples-tablewidth.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/examples/german/examples-tablewidth.html",
+		"oF": 0
+		},
+	"/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/LICENSE",
+		"oF": 0
+		},
+	"/node_modules": {
 		"ft": 65536,
 		"oA": 2,
-		"oAP": "\/build\/node_modules",
+		"oAP": "/build/node_modules",
 		"oF": 0
 		},
-	"\/package.json": {
+	"/package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/package-min.json",
+		"oAP": "/package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/README.html": {
+	"/README.html": {
+		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
-		"oAP": "\/README.html",
+		"oAP": "/README.html",
 		"oF": 0
 		},
-	"\/README.md": {
+	"/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "\/README.html",
+		"oAP": "/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -295,166 +396,193 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/src\/js\/defaults.js": {
+	"/src/js/defaults.js": {
+		"bF": 0,
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/dist\/js\/defaults.min.js",
+		"oAP": "/dist/js/defaults.min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 3,
 		"tS": 0
 		},
-	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.english.js": {
+	"/src/js/jquery.tablesorter.pager.appendcontrols.english.js": {
+		"bF": 0,
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.english.min.js",
+		"oAP": "/dist/js/jquery.tablesorter.pager.appendcontrols.english.min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 3,
 		"tS": 0
 		},
-	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.german.js": {
+	"/src/js/jquery.tablesorter.pager.appendcontrols.german.js": {
+		"bF": 0,
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.german.min.js",
+		"oAP": "/dist/js/jquery.tablesorter.pager.appendcontrols.german.min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 3,
 		"tS": 0
 		},
-	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.js": {
+	"/src/js/jquery.tablesorter.pager.appendcontrols.js": {
+		"bF": 0,
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/dist\/js\/jquery.tablesorter.pager.appendcontrols.min.js",
+		"oAP": "/dist/js/jquery.tablesorter.pager.appendcontrols.min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 3,
 		"tS": 0
 		},
-	"\/src\/js\/templates.js": {
+	"/src/js/templates.js": {
+		"bF": 0,
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/dist\/js\/templates.min.js",
+		"oAP": "/dist/js/templates.min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 3,
 		"tS": 0
 		},
-	"\/src\/less\/fullwidth.less": {
+	"/src/less/fullwidth.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/fullwidth.css",
+		"oAP": "/dist/css/fullwidth.css",
 		"oF": 1,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/less\/jquery.tablesorter.pager.appendcontrols.less": {
+	"/src/less/jquery.tablesorter.pager.appendcontrols.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/jquery.tablesorter.pager.appendcontrols.css",
+		"oAP": "/dist/css/jquery.tablesorter.pager.appendcontrols.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/less\/pillbuttons.less": {
+	"/src/less/pillbuttons.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/pillbuttons.css",
+		"oAP": "/dist/css/pillbuttons.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/less\/tablewidth-centered.less": {
+	"/src/less/scrolling.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/tablewidth-centered.css",
+		"oAP": "/dist/css/scrolling.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/src\/less\/tablewidth.less": {
+	"/src/less/tablewidth-centered.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/tablewidth.css",
+		"oAP": "/dist/css/tablewidth-centered.css",
+		"oF": 0,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/src/less/tablewidth.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 0,
+		"oAP": "/dist/css/tablewidth.css",
 		"oF": 1,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		}
 	},
 "hooks": [
 	],
 "manualImportLinks": {
-	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.english.js": [
+	"/src/js/jquery.tablesorter.pager.appendcontrols.english.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/jquery.tablesorter.pager.appendcontrols.js",
+			"linkedFileAbbreviatedPath": "/src/js/jquery.tablesorter.pager.appendcontrols.js",
 			"position": 0,
 			"type": 0
 			}
 		],
-	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.german.js": [
+	"/src/js/jquery.tablesorter.pager.appendcontrols.german.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/jquery.tablesorter.pager.appendcontrols.js",
+			"linkedFileAbbreviatedPath": "/src/js/jquery.tablesorter.pager.appendcontrols.js",
 			"position": 0,
 			"type": 0
 			}
 		],
-	"\/src\/js\/jquery.tablesorter.pager.appendcontrols.js": [
+	"/src/js/jquery.tablesorter.pager.appendcontrols.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/defaults.js",
+			"linkedFileAbbreviatedPath": "/src/js/defaults.js",
 			"position": 0,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/src\/js\/templates.js",
+			"linkedFileAbbreviatedPath": "/src/js/templates.js",
 			"position": 1,
 			"type": 1
 			}
@@ -464,147 +592,110 @@
 	"creationDate": 504464462,
 	"displayValue": "tablesorter-pagercontrols",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-facepalm"
+	"iconImageName": "meme-facepalm",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
+	"allowInjectionReloads": 1,
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
-	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoprefixerEnableIEGrid": 0,
+	"babel7PresetType": 1,
+	"babelAllowRCFiles": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
-	"babelConfigFileHandlingType": 0,
+	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
+	"babelExcludeString": "/\\/node_modules\\//, /\\/core-js\\//, /\\/bower_components\\//",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"arrow-functions": {
+			"active": 0
+			},
 		"async-generator-functions": {
 			"active": 0
 			},
 		"async-to-generator": {
 			"active": 0
 			},
-		"async-to-module-method": {
+		"block-scoped-functions": {
+			"active": 0
+			},
+		"block-scoping": {
 			"active": 0
 			},
 		"class-properties": {
 			"active": 0
 			},
+		"classes": {
+			"active": 0
+			},
+		"computed-properties": {
+			"active": 0
+			},
 		"decorators": {
 			"active": 0
 			},
-		"decorators-legacy": {
+		"destructuring": {
 			"active": 0
 			},
 		"do-expressions": {
 			"active": 0
 			},
-		"es2015-arrow-functions": {
+		"dotall-regex": {
 			"active": 0
 			},
-		"es2015-block-scoped-functions": {
-			"active": 0
-			},
-		"es2015-block-scoping": {
-			"active": 0
-			},
-		"es2015-classes": {
-			"active": 0
-			},
-		"es2015-computed-properties": {
-			"active": 0
-			},
-		"es2015-constants": {
-			"active": 0
-			},
-		"es2015-destructuring": {
-			"active": 0
-			},
-		"es2015-duplicate-keys": {
-			"active": 0
-			},
-		"es2015-for-of": {
-			"active": 0
-			},
-		"es2015-function-name": {
-			"active": 0
-			},
-		"es2015-literals": {
-			"active": 0
-			},
-		"es2015-modules-amd": {
-			"active": 0
-			},
-		"es2015-modules-commonjs": {
-			"active": 0
-			},
-		"es2015-modules-systemjs": {
-			"active": 0
-			},
-		"es2015-modules-umd": {
-			"active": 0
-			},
-		"es2015-object-super": {
-			"active": 0
-			},
-		"es2015-parameters": {
-			"active": 0
-			},
-		"es2015-shorthand-properties": {
-			"active": 0
-			},
-		"es2015-spread": {
-			"active": 0
-			},
-		"es2015-sticky-regex": {
-			"active": 0
-			},
-		"es2015-template-literals": {
-			"active": 0
-			},
-		"es2015-typeof-symbol": {
-			"active": 0
-			},
-		"es2015-unicode-regex": {
-			"active": 0
-			},
-		"es3-member-expression-literals": {
-			"active": 0
-			},
-		"es3-property-literals": {
-			"active": 0
-			},
-		"es5-property-mutators": {
-			"active": 0
-			},
-		"eval": {
+		"duplicate-keys": {
 			"active": 0
 			},
 		"exponentiation-operator": {
 			"active": 0
 			},
-		"export-extensions": {
+		"export-default-from": {
+			"active": 0
+			},
+		"export-namespace-from": {
 			"active": 0
 			},
 		"external-helpers": {
 			"active": 0
 			},
-		"flow-comments": {
+		"flow-strip-types": {
 			"active": 0
 			},
-		"flow-strip-types": {
+		"for-of": {
 			"active": 0
 			},
 		"function-bind": {
 			"active": 0
 			},
+		"function-name": {
+			"active": 0
+			},
+		"function-sent": {
+			"active": 0
+			},
+		"inline-consecutive-adds": {
+			"active": 0
+			},
 		"inline-environment-variables": {
 			"active": 0
 			},
+		"instanceof": {
+			"active": 0
+			},
 		"jscript": {
+			"active": 0
+			},
+		"literals": {
+			"active": 0
+			},
+		"logical-assignment-operators": {
 			"active": 0
 			},
 		"member-expression-literals": {
@@ -616,7 +707,61 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"minify-builtins": {
+			"active": 0
+			},
+		"minify-constant-folding": {
+			"active": 0
+			},
+		"minify-dead-code-elimination": {
+			"active": 0
+			},
+		"minify-flip-comparisons": {
+			"active": 0
+			},
+		"minify-guarded-expressions": {
+			"active": 0
+			},
+		"minify-infinity": {
+			"active": 0
+			},
+		"minify-mangle-names": {
+			"active": 0
+			},
+		"minify-numeric-literals": {
+			"active": 0
+			},
+		"minify-simplify": {
+			"active": 0
+			},
+		"minify-type-constructors": {
+			"active": 0
+			},
+		"modules-amd": {
+			"active": 0
+			},
+		"modules-commonjs": {
+			"active": 0
+			},
+		"modules-systemjs": {
+			"active": 0
+			},
+		"modules-umd": {
+			"active": 0
+			},
+		"named-capturing-groups-regex": {
+			"active": 0
+			},
+		"new-target": {
+			"active": 0
+			},
 		"node-env-inline": {
+			"active": 0
+			},
+		"nullish-coalescing-operator": {
+			"active": 0
+			},
+		"numeric-separator": {
 			"active": 0
 			},
 		"object-assign": {
@@ -628,7 +773,31 @@
 		"object-set-prototype-of-to-assign": {
 			"active": 0
 			},
+		"object-super": {
+			"active": 0
+			},
+		"optional-catch-binding": {
+			"active": 0
+			},
+		"optional-chaining": {
+			"active": 0
+			},
+		"parameters": {
+			"active": 0
+			},
+		"partial-application": {
+			"active": 0
+			},
+		"pipeline-operator": {
+			"active": 0
+			},
+		"private-methods": {
+			"active": 0
+			},
 		"property-literals": {
+			"active": 0
+			},
+		"property-mutators": {
 			"active": 0
 			},
 		"proto-to-assign": {
@@ -658,67 +827,66 @@
 		"regenerator": {
 			"active": 0
 			},
+		"regexp-constructors": {
+			"active": 0
+			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
 			"active": 0
 			},
+		"remove-undefined": {
+			"active": 0
+			},
+		"reserved-words": {
+			"active": 0
+			},
 		"runtime": {
+			"active": 0
+			},
+		"shorthand-properties": {
 			"active": 0
 			},
 		"simplify-comparison-operators": {
 			"active": 0
 			},
+		"spread": {
+			"active": 0
+			},
+		"sticky-regex": {
+			"active": 0
+			},
 		"strict-mode": {
 			"active": 0
 			},
-		"syntax-async-generators": {
+		"template-literals": {
 			"active": 0
 			},
-		"syntax-class-properties": {
+		"throw-expressions": {
 			"active": 0
 			},
-		"syntax-decorators": {
-			"active": 0
-			},
-		"syntax-do-expressions": {
-			"active": 0
-			},
-		"syntax-export-extensions": {
-			"active": 0
-			},
-		"syntax-flow": {
-			"active": 0
-			},
-		"syntax-function-bind": {
-			"active": 0
-			},
-		"syntax-function-sent": {
-			"active": 0
-			},
-		"syntax-jsx": {
-			"active": 0
-			},
-		"syntax-object-rest-spread": {
-			"active": 0
-			},
-		"undeclared-variables-check": {
+		"typeof-symbol": {
 			"active": 0
 			},
 		"undefined-to-void": {
 			"active": 0
+			},
+		"unicode-property-regex": {
+			"active": 0
+			},
+		"unicode-regex": {
+			"active": 0
 			}
 		},
-	"babelPresetType": 193,
 	"babelRetainLines": 0,
+	"babelUseBuiltInsType": 0,
 	"bowerAbbreviatedPath": "bower_components",
-	"bowerAutoCreateInfoFile": 1,
-	"bowerInstallDevDependencies": 0,
-	"bowerSaveDependencies": 1,
-	"bowerSaveDevDependencies": 0,
+	"bowerForceLatestOnConflict": 1,
+	"bowerTargetDependencyListType": 1,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
+	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
@@ -862,11 +1030,15 @@
 		},
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
-	"esLintEnvironmentsMask": 1,
+	"esLintEnvironmentsMask": 8193,
 	"esLintRules": {
 		"accessor-pairs": {
 			"active": 0,
 			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
+			},
+		"array-bracket-newline": {
+			"active": 0,
+			"optionString": "{'multiline': true, 'minItems': null}"
 			},
 		"array-bracket-spacing": {
 			"active": 0,
@@ -875,6 +1047,10 @@
 		"array-callback-return": {
 			"active": 0,
 			"optionString": ""
+			},
+		"array-element-newline": {
+			"active": 0,
+			"optionString": "'always'"
 			},
 		"arrow-body-style": {
 			"active": 0,
@@ -972,6 +1148,10 @@
 			"active": 0,
 			"optionString": "'always', {'null': 'always'}"
 			},
+		"for-direction": {
+			"active": 0,
+			"optionString": ""
+			},
 		"func-call-spacing": {
 			"active": 0,
 			"optionString": "'never'"
@@ -988,9 +1168,17 @@
 			"active": 0,
 			"optionString": "'expression'"
 			},
+		"function-paren-newline": {
+			"active": 0,
+			"optionString": "'multiline'"
+			},
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
+			},
+		"getter-return": {
+			"active": 0,
+			"optionString": "{'allowImplicit': false}"
 			},
 		"global-require": {
 			"active": 0,
@@ -1015,6 +1203,10 @@
 		"id-match": {
 			"active": 0,
 			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			},
+		"implicit-arrow-linebreak": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"indent": {
 			"active": 0,
@@ -1048,9 +1240,13 @@
 			"active": 0,
 			"optionString": "{'beforeBlockComment': true}"
 			},
-		"lines-around-directive": {
+		"lines-between-class-members": {
 			"active": 0,
-			"optionString": "{'before': 'always', 'after': 'always'}"
+			"optionString": "'always', {exceptAfterSingleLine: false}"
+			},
+		"max-classes-per-file": {
+			"active": 0,
+			"optionString": "1"
 			},
 		"max-depth": {
 			"active": 0,
@@ -1063,6 +1259,10 @@
 		"max-lines": {
 			"active": 0,
 			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
+		"max-lines-per-function": {
+			"active": 0,
+			"optionString": "{'max': 50, 'skipBlankLines': true, 'skipComments': true, 'IIFEs': false}"
 			},
 		"max-nested-callbacks": {
 			"active": 0,
@@ -1080,6 +1280,10 @@
 			"active": 0,
 			"optionString": "{'max': 1}"
 			},
+		"multiline-comment-style": {
+			"active": 0,
+			"optionString": "'starred-block'"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -1089,14 +1293,6 @@
 			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
 			},
 		"new-parens": {
-			"active": 0,
-			"optionString": ""
-			},
-		"newline-after-var": {
-			"active": 0,
-			"optionString": "'always'"
-			},
-		"newline-before-return": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -1112,6 +1308,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-async-promise-executor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
@@ -1120,16 +1320,16 @@
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
 			},
+		"no-buffer-constructor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-caller": {
 			"active": 0,
 			"optionString": ""
 			},
 		"no-case-declarations": {
 			"active": 1,
-			"optionString": ""
-			},
-		"no-catch-shadow": {
-			"active": 0,
 			"optionString": ""
 			},
 		"no-class-assign": {
@@ -1328,9 +1528,13 @@
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
 			},
+		"no-misleading-character-class": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-mixed-operators": {
 			"active": 0,
-			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			"optionString": "{'groups': [['+', '-', '*', '/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -1421,6 +1625,10 @@
 			"optionString": ""
 			},
 		"no-proto": {
+			"active": 0,
+			"optionString": ""
+			},
+		"no-prototype-builtins": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -1576,6 +1784,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-catch": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-useless-computed-key": {
 			"active": 1,
 			"optionString": ""
@@ -1660,6 +1872,10 @@
 			"active": 0,
 			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
 			},
+		"padding-line-between-statements": {
+			"active": 0,
+			"optionString": "{blankLine: 'always', prev:'*', next:'return'}"
+			},
 		"prefer-arrow-callback": {
 			"active": 0,
 			"optionString": ""
@@ -1672,7 +1888,15 @@
 			"active": 0,
 			"optionString": "{'array': true, 'object': true}, {'enforceForRenamedProperties': false}"
 			},
+		"prefer-named-capture-group": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-numeric-literals": {
+			"active": 0,
+			"optionString": ""
+			},
+		"prefer-object-spread": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -1704,6 +1928,10 @@
 			"active": 0,
 			"optionString": "'always'"
 			},
+		"require-atomic-updates": {
+			"active": 0,
+			"optionString": ""
+			},
 		"require-await": {
 			"active": 0,
 			"optionString": ""
@@ -1711,6 +1939,10 @@
 		"require-jsdoc": {
 			"active": 0,
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false, 'ArrowFunctionExpression': false}}"
+			},
+		"require-unicode-regexp": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-yield": {
 			"active": 0,
@@ -1727,6 +1959,10 @@
 		"semi-spacing": {
 			"active": 0,
 			"optionString": "{'before': false, 'after': true}"
+			},
+		"semi-style": {
+			"active": 0,
+			"optionString": "'last'"
 			},
 		"sort-imports": {
 			"active": 0,
@@ -1762,11 +1998,15 @@
 			},
 		"spaced-comment": {
 			"active": 0,
-			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			"optionString": "'always', {'line': {'markers': ['/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
 			},
 		"strict": {
 			"active": 0,
 			"optionString": "'safe'"
+			},
+		"switch-colon-spacing": {
+			"active": 0,
+			"optionString": "{'after': true, 'before': false}"
 			},
 		"symbol-description": {
 			"active": 0,
@@ -1818,7 +2058,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http://localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -2180,7 +2420,8 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 1
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 2,
@@ -2212,7 +2453,8 @@
 		"escapeHTMLCharacters": 0,
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
-		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -2224,18 +2466,20 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.min.js",
-		"autoOutputPathRelativePath": "\/min",
+		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "src",
 		"autoOutputPathReplace2": "dist",
 		"autoOutputPathStyle": 3,
+		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
-		"syntaxCheckerStyle": 1,
+		"syntaxCheckerStyle": 3,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {
@@ -2248,39 +2492,33 @@
 		"orderOutput": 0,
 		"outputStyle": 1
 		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
-		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
-		"autoOutputPathReplace1": "src\/less",
-		"autoOutputPathReplace2": "dist\/css",
+		"autoOutputPathRelativePath": "../css",
+		"autoOutputPathReplace1": "src/less",
+		"autoOutputPathReplace2": "dist/css",
 		"autoOutputPathStyle": 3,
 		"createSourceMap": 1,
-		"disableJavascript": 0,
+		"enableJavascript": 0,
 		"ieCompatibility": 1,
+		"mathStyle": 0,
 		"outputStyle": 0,
-		"relativeURLS": 0,
+		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"strictImports": 0,
-		"strictMath": 0,
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
@@ -2294,13 +2532,14 @@
 		"enableFootnotes": 1,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
 		"maskEmailAddresses": 1,
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -2309,7 +2548,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -2318,7 +2559,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"enableLossy": 1,
+		"optimizerType": 1,
 		"quality": 100
 		},
 	"languageDefaultsPUG": {
@@ -2329,12 +2570,14 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
@@ -2357,12 +2600,14 @@
 		"logicless": 0,
 		"outputFormat": 0,
 		"outputStyle": 1,
-		"railsCompatible": 0
+		"railsCompatible": 0,
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
@@ -2386,34 +2631,75 @@
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "\/js",
+		"autoOutputPathRelativePath": "/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
-		"jsxMode": 0,
 		"minifyOutput": 0,
 		"moduleResolutionType": 0,
 		"moduleType": 2,
-		"noImplicitAny": 0,
-		"preserveConstEnums": 0,
 		"removeComments": 0,
-		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"npmAbbreviatedPath": "",
+	"npmCreatePackageLock": 1,
+	"npmInstallOptionalDependencies": 0,
+	"npmSaveExactVersion": 0,
+	"npmTargetDependencyListType": 1,
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
+	"susyVersion": 3,
+	"tsAllowSyntheticDefaultImports": 0,
+	"tsAllowUnreachableCode": 0,
+	"tsAllowUnusedLabels": 0,
+	"tsAlwaysStrict": 0,
+	"tsDownlevelIteration": 0,
+	"tsEmitBOM": 0,
+	"tsEmitDecoratorMetadata": 0,
+	"tsESModuleInterop": 0,
+	"tsForceConsistentCasingInFileNames": 0,
+	"tsImportHelpers": 0,
+	"tsIsolatedModules": 0,
+	"tsJSXFactory": "React.createElement",
+	"tsKeyofStringsOnly": 0,
+	"tsNoEmitHelpers": 0,
+	"tsNoFallthroughCasesInSwitch": 0,
+	"tsNoImplicitAny": 0,
+	"tsNoImplicitReturns": 0,
+	"tsNoImplicitThis": 0,
+	"tsNoImplicitUseStrict": 0,
+	"tsNoLib": 0,
+	"tsNoResolve": 0,
+	"tsNoStrictGenericChecks": 0,
+	"tsNoUnusedLocals": 0,
+	"tsNoUnusedParameters": 0,
+	"tsPreserveConstEnums": 0,
+	"tsPreserveSymlinks": 0,
+	"tsResolveJsonModule": 0,
+	"tsSkipLibCheck": 0,
+	"tsStrictFunctionTypes": 0,
+	"tsStrictNullChecks": 0,
+	"tsStrictPropertyInitialization": 0,
+	"tsStripInternal": 0,
+	"tsSuppressExcessPropertyErrors": 0,
+	"tsSuppressImplicitAnyIndexErrors": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
-		"ascii-only": {
-			"active": 0,
+		"arguments": {
+			"active": 1,
 			"flagValue": -1
 			},
-		"bare-returns": {
+		"arrows": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2421,23 +2707,27 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"bracketize": {
+		"booleans_as_integers": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"cascade": {
+		"braces": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"collapse_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"comparisons": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"compress": {
+		"computed_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -2449,6 +2739,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"directives": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"drop_console": {
 			"active": 0,
 			"flagValue": -1
@@ -2456,6 +2750,10 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"ecma": {
+			"active": 1,
+			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -2465,7 +2763,15 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"expression": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -2473,24 +2779,36 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"ie8": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"if_return": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-level": {
+		"indent_level": {
 			"active": 0,
 			"flagValue": 4
 			},
-		"indent-start": {
+		"indent_start": {
 			"active": 0,
 			"flagValue": 0
 			},
-		"inline-script": {
-			"active": 0,
+		"inline": {
+			"active": 1,
+			"flagValue": 3
+			},
+		"inline_script": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"join_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"keep_classnames": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -2501,21 +2819,33 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"keep_infinity": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_quoted_props": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"mangle": {
-			"active": 1,
-			"flagValue": -1
-			},
-		"max-line-len": {
+		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
+			},
+		"module": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"passes": {
+			"active": 1,
+			"flagValue": 1
 			},
 		"properties": {
 			"active": 1,
@@ -2525,12 +2855,24 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote-keys": {
+		"quote_keys": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"screw-ie8": {
+		"quote_style": {
 			"active": 1,
+			"flagValue": 0
+			},
+		"reduce_funcs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"reduce_vars": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"safari10": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -2541,23 +2883,59 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"sort": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"space-colon": {
+		"shebang": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"support-ie8": {
-			"active": 0,
+		"side_effects": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"switches": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"toplevel": {
 			"active": 0,
 			"flagValue": -1
 			},
+		"typeofs": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_comps": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_Function": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_methods": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_regexp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_undefined": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -2569,11 +2947,16 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"width": {
-			"active": 1,
-			"flagValue": 80
+		"webkit": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"wrap_iife": {
+			"active": 0,
+			"flagValue": -1
 			}
 		},
+	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
 	"websiteRelativeRoot": ""
 	},
