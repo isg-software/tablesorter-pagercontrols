@@ -52,7 +52,7 @@
 		 * Requires CSS file scrolling.css to work.
 		 */
 		scrolling: {
-			classTableWrapper: "scroll"
+			classTableWrapper: "tablesorterPagerScrollWrapper"
 		}
 	};
  

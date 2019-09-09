@@ -74,13 +74,19 @@
 		};
  
 		this.filter("table").each(function() {
-			var t = $(this);
+			var t = $(this); //table
 			
 			var cntLines = $("tbody tr", t).length;
 			if (!Array.isArray(settings.sizes)) {
 				throw "option 'sizes' must be an array!";
 			} else if (settings.sizes.length === 0) {
 				throw "array 'sizes' must not be empty!";
+			}
+			
+			var wt = t; //optionally wrapped table (div of classTableWrapper containing the table, or t itself if classTW is null)
+			if (typeof settings.classTableWrapper === 'string') {
+				t.wrap('<div class="' + settings.classTableWrapper + '"></div>');
+				wt = t.parent();
 			}
 
 			//Precondition: sizes is not emtpy and is sorted ascending, i.e. settings.sizes[0] is defined and minimal.
@@ -103,16 +109,12 @@
 				//Das Div dient dazu, CSS-Formatierungen wie display:inline-block zu ermöglichen, so dass
 				//in diesem inline-block die Controls z.B. rechtsbündung unter dem rechten Tabellenrand 
 				//angeordnet werden können.
-				t.wrap('<div class="' + settings.classWrapper + '"></div>');
+				wt.wrap('<div class="' + settings.classWrapper + '"></div>');
 				if (typeof settings.classInnerWrapper === 'string') {
-					t.wrap('<div class="' + settings.classInnerWrapper + '"></div>');
+					wt.wrap('<div class="' + settings.classInnerWrapper + '"></div>');
 				}
-				var appendTo = t;
-				if (typeof settings.classTableWrapper === 'string') {
-					t.wrap('<div class="' + settings.classTableWrapper + '"></div>');
-					appendTo = t.parent();
-				}
-				appendTo.after(controls);
+				
+				wt.after(controls);
 				
 				var container = $("#" + id);
 				t.on("pagerComplete", function(ev, opts) {

@@ -64,9 +64,49 @@ The templates just insert markup that still has to be formatted with the styles 
 If you don't load <code>scrolling.css</code>, the table will not be locally scrollable. And if you don't load
 <code>fullwidth.css</code>, the alignment of the pager buttons will not work as expected.</p>
 
+<h1>Short Table</h1>
+<p>Demonstrates/tests that the <code>classTableWrapper</code> option is also applied if no pager is added
+(due to the table not having more rows that <code>sizes[0]</code>).</p>
+<table class="tablesorter tablesorter-blue">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Major</th>
+			<th>Sex</th>
+			<th>English</th>
+			<th>Japanese</th>
+			<th>Calculus</th>
+			<th>Geometry</th>
+			<th>More</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Student01</td>
+			<td>Languages</td>
+			<td>male</td>
 
+			<td>80</td>
+			<td>70</td>
+			<td>75</td>
+			<td>80</td>
+			<td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</td>
+		</tr>
+		<tr>
+			<td>Student02</td>
 
-<h1>The Table</h1>
+			<td>Mathematics</td>
+			<td>male</td>
+			<td>90</td>
+			<td>88</td>
+			<td>100</td>
+			<td>90</td>
+			<td>At vero eos et accusam et justo duo dolores et ea rebum.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h1>Longer Table</h1>
 <table class="tablesorter tablesorter-blue">
 	<thead>
 		<tr>
