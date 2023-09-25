@@ -11,5 +11,10 @@
 		"all"		: "all",
 		"rows"		: "rows"
 	};
+	
+	$.fn.appendTablesorterPagerControls.arialabels = {
+		"first"		: "first page",
+		"last" 		: "last page"
+	};
 
 }( jQuery ));

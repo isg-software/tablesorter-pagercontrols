@@ -1,6 +1,6 @@
 /**
  * @license 
- * Copyright (c) 2017, Immo Schulz-Gerlach, www.isg-software.de 
+ * Copyright (c) 2023, Immo Schulz-Gerlach, www.isg-software.de 
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification, are 
@@ -27,40 +27,57 @@
 (function( $ ) {
 	"use strict";
  
-	var idCounter = 1;
+	let idCounter = 1;
+
+
  
 	$.fn.appendTablesorterPagerControls = function() {
-	
-		var settings = $.extend({}, $.fn.appendTablesorterPagerControls.defaults);
-		var tooltips = $.extend({}, $.fn.appendTablesorterPagerControls.tooltips);
-		for (var i = 0; i < arguments.length; i++) {
-			var args = arguments[i];
+	 
+		let settings = $.extend({}, $.fn.appendTablesorterPagerControls.defaults);
+		let tooltips = $.extend({}, $.fn.appendTablesorterPagerControls.tooltips);
+		let arialabels = $.extend({}, $.fn.appendTablesorterPagerControls.arialabels);
+		
+		for (let i = 0; i < arguments.length; i++) {
+			const args = arguments[i];
 			$.extend(settings, args);
 			if (args.tooltips) {
 				$.extend(tooltips, args.tooltips);
 			}
+			if (args.arialabels) {
+				$.extend(arialabels, args.arialabels);
+			}
 		}
 		
-		var btnFirst = '<button type="button" class="' + settings.classFirst + '" title="' + tooltips.first + '">' + settings.labelFirst + '</button>';
-		var btnPrev  = '<button type="button" class="' + settings.classPrev + '" title="' + tooltips.prev + '">' + settings.labelPrev + '</button>';
-		var btnNext  = '<button type="button" class="' + settings.classNext + '" title="' + tooltips.next + '">' + settings.labelNext + '</button>';
-		var btnLast  = '<button type="button" class="' + settings.classLast + '" title="' + tooltips.last + '">' + settings.labelLast + '</button>';
+		function getAriaLabel(prop) {
+			if (typeof arialabels[prop] === "string")
+				return arialabels[prop];
+			else
+				return tooltips[prop];
+		}
+	
+		function button(cls, prop, label, wrap) {
+			return '<button type="button" class="' + cls + '" title="' + tooltips[prop] + '" aria-label="' + getAriaLabel(prop) + '">' 
+					+ (wrap ? '<span class="' + wrap + '">' : '')
+					+ label
+					+ (wrap ? '</span>' : '')				
+					+  '</button>';
+		}
 
-		var display = function(id) {
-			var displayCommonAttribs = ' class="' + settings.classPagedisplay + '" id="' + id + '" title="' + tooltips.pagedisplay + '"';
+		function display(id) {
+			let displayCommonAttribs = ' class="' + settings.classPagedisplay + '" id="' + id + '" title="' + tooltips.pagedisplay + '"';
 			if (settings.outputFiltered) {
 				displayCommonAttribs += ' data-pager-output-filtered="' + settings.outputFiltered + '"';
 			}		
 			return typeof settings.pagedisplayInputSize === 'number' && settings.pagedisplayInputSize > 0 ?
 					'<input type="text" size="' + settings.pagedisplayInputSize+ '" readonly name="'+id+'pgnr"' + displayCommonAttribs + '/>'
 					: '<span ' + displayCommonAttribs + '></span>';
-		};
+		}
 		
-		var sizeSelect = function(id) {
-			var selectId = id+"sel";
-			var s = '<select class="' + settings.classPagesize + '" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
-			for (var i = 0, o = settings.sizes.length; i < o; i++) {
-				var size = settings.sizes[i];
+		function sizeSelect(id) {
+			const selectId = id+"sel";
+			let s = '<select class="' + settings.classPagesize + '" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
+			for (let i = 0, o = settings.sizes.length; i < o; i++) {
+				const size = settings.sizes[i];
 				s += '<option value="' + size + '"';
 				if (size === settings.initialSize) {
 					s += ' selected';
@@ -71,19 +88,24 @@
 				'</select> ' + 
 				'<label for="'+selectId+'">' + tooltips.rows + '</label>';
 			return s;
-		};
+		}
+		
+		const btnFirst = button(settings.classFirst, "first", settings.labelFirst, settings.buttonLabelClass);
+		const btnPrev = button(settings.classPrev, "prev", settings.labelPrev, settings.buttonLabelClass);
+		const btnNext = button(settings.classNext, "next", settings.labelNext, settings.buttonLabelClass);
+		const btnLast = button(settings.classLast, "last", settings.labelLast, settings.buttonLabelClass);
  
 		this.filter("table").each(function() {
-			var t = $(this); //table
+			const t = $(this); //table
 			
-			var cntLines = $("tbody tr", t).length;
+			const cntLines = $("tbody tr", t).length;
 			if (!Array.isArray(settings.sizes)) {
 				throw "option 'sizes' must be an array!";
 			} else if (settings.sizes.length === 0) {
 				throw "array 'sizes' must not be empty!";
 			}
 			
-			var wt = t; //optionally wrapped table (div of classTableWrapper containing the table, or t itself if classTW is null)
+			let wt = t; //optionally wrapped table (div of classTableWrapper containing the table, or t itself if classTW is null)
 			if (typeof settings.classTableWrapper === 'string') {
 				t.wrap('<div class="' + settings.classTableWrapper + '"></div>');
 				wt = t.parent();
@@ -91,7 +113,7 @@
 
 			//Precondition: sizes is not emtpy and is sorted ascending, i.e. settings.sizes[0] is defined and minimal.
 			//Only insert table pager if the table has more rows than this minimal pager size:
-			if (cntLines > settings.sizes[0]) {
+			if (settings.forcePager || cntLines > settings.sizes[0]) {
 				var id = settings.prefix + idCounter++;
 
 				var controls = '<div id="' + id + '" class="' + settings.classControls + '">' +
@@ -116,16 +138,9 @@
 				
 				wt.after(controls);
 				
-				var container = $("#" + id);
-				t.on("pagerComplete", function(ev, opts) {
-					var pageCnt = typeof opts.filteredPages === 'number' ? opts.filteredPages : opts.totalPages;
-					$("#" + id + " button." + settings.classPrev + ", #" + id + " button." + settings.classFirst)
-						.prop("disabled", opts.page === 0);
-					$("#" + id + " button." + settings.classNext + ", #" + id + " button." + settings.classLast)
-						.prop("disabled", opts.page >= pageCnt - 1);
-						//use >= instead of ===
-						//reason: if table is empty (e.g. filtered), pageCnt may be 0, pageCnt-1 thus negative, while opts.page is 0 (greater -1)!
-				}).tablesorterPager({
+				const container = $("#" + id);
+				
+				let pagerOptions = {
 					container: container,
 					size: settings.initialSize,
 					offset: 0,
@@ -138,7 +153,19 @@
 					cssPageSize: '.' + settings.classPagesize,
 					output: settings.output, 
 					positionFixed: false
-				});
+				};
+				if (typeof settings.pagerOptions === "object")
+					$.extend(pagerOptions, settings.pagerOptions);
+				
+				t.on("pagerComplete", function(ev, opts) {
+					const pageCnt = typeof opts.filteredPages === 'number' ? opts.filteredPages : opts.totalPages;
+					$("#" + id + " button." + settings.classPrev + ", #" + id + " button." + settings.classFirst)
+						.prop("disabled", opts.page === 0);
+					$("#" + id + " button." + settings.classNext + ", #" + id + " button." + settings.classLast)
+						.prop("disabled", opts.page >= pageCnt - 1);
+						//use >= instead of ===
+						//reason: if table is empty (e.g. filtered), pageCnt may be 0, pageCnt-1 thus negative, while opts.page is 0 (greater -1)!
+				}).tablesorterPager(pagerOptions);
 			}
 		});
  

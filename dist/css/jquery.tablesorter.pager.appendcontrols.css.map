@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../src/less/jquery.tablesorter.pager.appendcontrols.less"],"names":[],"mappings":"AAAA;EACC,oBAAA;;AADD,yBAEC;EACC,cAAA;EACA,mBAAA","file":"jquery.tablesorter.pager.appendcontrols.css"}
+{"version":3,"sources":["../../src/less/jquery.tablesorter.pager.appendcontrols.less"],"names":[],"mappings":"AAAA;EACC,oBAAA;;AADD,yBAEC;EACC,cAAA;EACA,mBAAA;;AAJF,yBAMC,OAAM,KACL;AAPF,yBAMc,OAAM,MAClB;EACC,qBAAA;EACA,WAAW,YAAX;;AATH,yBAMC,OAAM,KAKL;AAXF,yBAMc,OAAM,MAKlB;EACC,qBAAA;EACA,WAAW,cAAX","file":"jquery.tablesorter.pager.appendcontrols.css"}
