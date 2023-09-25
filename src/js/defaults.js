@@ -134,6 +134,15 @@
 			 */
 			labelLast: "&gt;&gt;",
 			/**
+			 * If this is a string, each button label will be wrapped in a span with a class attribute, and this property defines
+			 * the latter's value.
+			 * This may e.g. be used to add the class "flipLeft" to each button label. The default CSS will then horizontally flip
+			 * these button labels for the left two buttons (prev and first).
+			 * Alternatively, you may use the class "rotateLeft", which will by default rotate the button labels of the prev- and first-
+			 * buttons by 180 degrees.
+			 */
+			buttonLabelClass: null,
+			/**
 			 * If false, pager buttons are only added to a table if that table contains more rows than
 			 * the smallest page size (i.e. actual row count < sizes[0]).
 			 * Set this to true to force appending pager controls regardless of actual table size (e.g. if the

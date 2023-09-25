@@ -28,25 +28,42 @@
 	"use strict";
  
 	let idCounter = 1;
+
+
  
 	$.fn.appendTablesorterPagerControls = function() {
-	
+	 
 		let settings = $.extend({}, $.fn.appendTablesorterPagerControls.defaults);
 		let tooltips = $.extend({}, $.fn.appendTablesorterPagerControls.tooltips);
+		let arialabels = $.extend({}, $.fn.appendTablesorterPagerControls.arialabels);
+		
 		for (let i = 0; i < arguments.length; i++) {
 			const args = arguments[i];
 			$.extend(settings, args);
 			if (args.tooltips) {
 				$.extend(tooltips, args.tooltips);
 			}
+			if (args.arialabels) {
+				$.extend(arialabels, args.arialabels);
+			}
 		}
 		
-		const btnFirst = '<button type="button" class="' + settings.classFirst + '" title="' + tooltips.first + '">' + settings.labelFirst + '</button>';
-		const btnPrev  = '<button type="button" class="' + settings.classPrev + '" title="' + tooltips.prev + '">' + settings.labelPrev + '</button>';
-		const btnNext  = '<button type="button" class="' + settings.classNext + '" title="' + tooltips.next + '">' + settings.labelNext + '</button>';
-		const btnLast  = '<button type="button" class="' + settings.classLast + '" title="' + tooltips.last + '">' + settings.labelLast + '</button>';
+		function getAriaLabel(prop) {
+			if (typeof arialabels[prop] === "string")
+				return arialabels[prop];
+			else
+				return tooltips[prop];
+		}
+	
+		function button(cls, prop, label, wrap) {
+			return '<button type="button" class="' + cls + '" title="' + tooltips[prop] + '" aria-label="' + getAriaLabel(prop) + '">' 
+					+ (wrap ? '<span class="' + wrap + '">' : '')
+					+ label
+					+ (wrap ? '</span>' : '')				
+					+  '</button>';
+		}
 
-		const display = function(id) {
+		function display(id) {
 			let displayCommonAttribs = ' class="' + settings.classPagedisplay + '" id="' + id + '" title="' + tooltips.pagedisplay + '"';
 			if (settings.outputFiltered) {
 				displayCommonAttribs += ' data-pager-output-filtered="' + settings.outputFiltered + '"';
@@ -54,9 +71,9 @@
 			return typeof settings.pagedisplayInputSize === 'number' && settings.pagedisplayInputSize > 0 ?
 					'<input type="text" size="' + settings.pagedisplayInputSize+ '" readonly name="'+id+'pgnr"' + displayCommonAttribs + '/>'
 					: '<span ' + displayCommonAttribs + '></span>';
-		};
+		}
 		
-		const sizeSelect = function(id) {
+		function sizeSelect(id) {
 			const selectId = id+"sel";
 			let s = '<select class="' + settings.classPagesize + '" id="'+selectId+'" name="'+selectId+'" title="' + tooltips.pagesize + '">';
 			for (let i = 0, o = settings.sizes.length; i < o; i++) {
@@ -71,7 +88,12 @@
 				'</select> ' + 
 				'<label for="'+selectId+'">' + tooltips.rows + '</label>';
 			return s;
-		};
+		}
+		
+		const btnFirst = button(settings.classFirst, "first", settings.labelFirst, settings.buttonLabelClass);
+		const btnPrev = button(settings.classPrev, "prev", settings.labelPrev, settings.buttonLabelClass);
+		const btnNext = button(settings.classNext, "next", settings.labelNext, settings.buttonLabelClass);
+		const btnLast = button(settings.classLast, "last", settings.labelLast, settings.buttonLabelClass);
  
 		this.filter("table").each(function() {
 			const t = $(this); //table

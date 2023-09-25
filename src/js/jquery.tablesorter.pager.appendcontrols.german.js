@@ -11,5 +11,10 @@
 		"all"		: "Alle",
 		"rows"		: "Zeilen"
 	};
+	
+	$.fn.appendTablesorterPagerControls.arialabels = {
+		"prev"		: "zur&uuml;ckbl&auml;ttern",
+		"next" 		: "weiterbl&auml;ttern"
+	};
 
 }( jQuery ));

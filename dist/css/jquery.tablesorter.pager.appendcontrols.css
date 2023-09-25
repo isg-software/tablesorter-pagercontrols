@@ -5,4 +5,14 @@
   padding: 0.2em;
   white-space: nowrap;
 }
+.tablesorterPagerControls button.prev .flipLeft,
+.tablesorterPagerControls button.first .flipLeft {
+  display: inline-block;
+  transform: scale(-1, 1);
+}
+.tablesorterPagerControls button.prev .rotateLeft,
+.tablesorterPagerControls button.first .rotateLeft {
+  display: inline-block;
+  transform: rotate(180deg);
+}
 /*# sourceMappingURL=jquery.tablesorter.pager.appendcontrols.css.map */
